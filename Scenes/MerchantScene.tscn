@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://m4c7uwwo5npk"]
+
+[ext_resource type="Script" path="res://Scripts/Player.cs" id="1_2sfgm"]
+[ext_resource type="Script" path="res://Scripts/Item.cs" id="2_il7q1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" type="Node" parent="."]
+script = ExtResource("1_2sfgm")
+Inventory = Array[Object]([ExtResource("2_il7q1")])
