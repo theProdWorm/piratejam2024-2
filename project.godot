@@ -21,7 +21,7 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 [application]
 
 config/name="Piratejam2024-2"
-run/main_scene="res://Scenes/MerchantScene.tscn"
+run/main_scene="res://Scenes/Root.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 

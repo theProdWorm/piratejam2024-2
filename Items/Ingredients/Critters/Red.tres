@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Ingredient" load_steps=3 format=3 uid="uid://c50lb007l3tkm"]
+
+[ext_resource type="Script" path="res://Scripts/Data Classes/IngredientData.cs" id="1_1nuon"]
+[ext_resource type="Texture2D" uid="uid://0ch8m6cxayx3" path="res://Textures/Red.png" id="1_vjg7p"]
+
+[resource]
+script = ExtResource("1_1nuon")
+StepsToPrepare = Array[int]([0])
+Name = "Red"
+Price = 500
+Texture = ExtResource("1_vjg7p")
