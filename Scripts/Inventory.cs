@@ -1,7 +1,8 @@
 using Godot;
 using Godot.Collections;
 
-public partial class Player : Node {
+[GlobalClass]
+public partial class Inventory : Node {
     public Array<Ingredient> ingredients = new();
     public Array<Potion> potions = new();
 
