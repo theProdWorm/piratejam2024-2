@@ -3,6 +3,10 @@
     "res://Resources/": {
       "resource_local_to_scene": true,
       "resource_name": true
+    },
+    "res://Resources/Items/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
     }
   },
   "recent_paths": [
@@ -10,6 +14,11 @@
     "res://Resources/Items/"
   ],
   "table_functions": {
-
+    "filter": [
+      "return true"
+    ],
+    "process": [
+      "return value"
+    ]
   }
 }

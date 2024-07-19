@@ -1,16 +1,14 @@
 using Godot;
-using System;
-using System.Collections.Generic;
+using Godot.Collections;
 
 public partial class Player : Node {
-	// Called when the node enters the scene tree for the first time.
-	public override void _Ready () {
-	}
+    public Array<Ingredient> ingredients = new();
+    public Array<Potion> potions = new();
 
-	// Called every frame. 'delta' is the elapsed time since the previous frame.
-	public override void _Process (double delta) {
-	}
+    public override void _Ready () {
+        
+    }
 
-	[Export]
-	public Godot.Collections.Array<Item> Inventory { get; set; }
+    public override void _Process (double delta) {
+    }
 }
