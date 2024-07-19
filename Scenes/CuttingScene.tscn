@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3mkeg1bqh0qv"]
+
+[ext_resource type="Script" path="res://Scripts/Scene scripts/CuttingScene.cs" id="1_qgt5u"]
+[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Preparation_Cutting.png" id="1_uoml7"]
+
+[node name="CuttingScene" type="Node2D"]
+script = ExtResource("1_qgt5u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background(Change to TextureRect later)" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.216239, 0.297507, 0.455474, 1)
+
+[node name="Cutting" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.303
+anchor_top = 0.306
+anchor_right = 0.694
+anchor_bottom = 0.696
+offset_left = -0.0559998
+offset_top = -0.28801
+offset_right = 0.511963
+offset_bottom = -0.00802612
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_uoml7")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.937
+anchor_right = 1.0
+anchor_bottom = 0.105
+offset_left = 0.575928
+offset_top = -1.0
+offset_right = -1.0
+offset_bottom = -0.0400009
+text = "Back"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="BackButtonClicked"]
