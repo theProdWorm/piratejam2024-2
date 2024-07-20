@@ -1,0 +1,71 @@
+[gd_scene load_steps=9 format=3 uid="uid://bdpy76od4lylg"]
+
+[ext_resource type="Script" path="res://Scripts/Scene scripts/PreparationScene.cs" id="1_r5qbm"]
+[ext_resource type="Texture2D" uid="uid://cyxayow0behnw" path="res://Preparation_Table.png" id="2_2pehx"]
+[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Preparation_Cutting.png" id="3_ltn2y"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6h5d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6qup2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gquwl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k3qnk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfpi5"]
+
+[node name="Preparation" type="Node2D"]
+script = ExtResource("1_r5qbm")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Background(Change to TextureRect later)" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.216239, 0.297507, 0.455474, 1)
+
+[node name="Table" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2pehx")
+expand_mode = 1
+
+[node name="Cutting" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.054
+anchor_top = 0.671
+anchor_right = 0.269
+anchor_bottom = 0.855
+offset_left = -0.208
+offset_top = 0.191986
+offset_right = 0.111969
+offset_bottom = -0.0400391
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ltn2y")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/Cutting"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 828.0
+offset_top = -412.0
+offset_right = 828.0
+offset_bottom = -412.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p6h5d")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_6qup2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_gquwl")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_k3qnk")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yfpi5")
+
+[connection signal="pressed" from="CanvasLayer/Cutting/Button" to="." method="CuttingClicked"]
