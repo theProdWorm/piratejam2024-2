@@ -13,8 +13,9 @@ public partial class PreparationScene : Node2D
 		
 
         Inventory = GetNode<Inventory>( "/root/GlobalInventory" );
-		Ingredient ing = new Ingredient();
-		ing.Name = "Yes";
+		IngredientData ing = new() {
+			Name = "Yes"
+		};
 		Inventory.ingredients.Add( ing );
 
 		PrintOrphanNodes();

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyxayow0behnw"
-path="res://.godot/imported/Preparation_Table.png-e5384b4c06587e78fdd71db8a1b3fc2b.ctex"
+uid="uid://chyt4dui2hd3b"
+path="res://.godot/imported/Preparation_Cutting.png-3129fd7f3d7f7860a3c25503ff9c65c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Preparation_Table.png"
-dest_files=["res://.godot/imported/Preparation_Table.png-e5384b4c06587e78fdd71db8a1b3fc2b.ctex"]
+source_file="res://Textures/Preparation_Cutting.png"
+dest_files=["res://.godot/imported/Preparation_Cutting.png-3129fd7f3d7f7860a3c25503ff9c65c8.ctex"]
 
 [params]
 

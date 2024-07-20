@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://m4c7uwwo5npk"]
+[gd_scene load_steps=2 format=3 uid="uid://m4c7uwwo5npk"]
+
+[ext_resource type="Texture2D" uid="uid://c315qebpkahdv" path="res://Textures/Inventory.jpg" id="1_07f7y"]
 
 [node name="MerchantScene" type="Node2D"]
+
+[node name="Inventory" type="Sprite2D" parent="."]
+position = Vector2(562, 425)
+scale = Vector2(2.08842, 2.08842)
+texture = ExtResource("1_07f7y")

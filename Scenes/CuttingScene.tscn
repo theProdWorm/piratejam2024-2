@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3mkeg1bqh0qv"]
+[gd_scene load_steps=3 format=3 uid="uid://b1vi3q1b4opqd"]
 
 [ext_resource type="Script" path="res://Scripts/Scene scripts/CuttingScene.cs" id="1_qgt5u"]
-[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Preparation_Cutting.png" id="1_uoml7"]
+[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Textures/Preparation_Cutting.png" id="2_sy3fe"]
 
 [node name="CuttingScene" type="Node2D"]
 script = ExtResource("1_qgt5u")
@@ -28,7 +28,7 @@ offset_right = 0.511963
 offset_bottom = -0.00802612
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_uoml7")
+texture = ExtResource("2_sy3fe")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="CanvasLayer"]
