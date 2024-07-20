@@ -46,12 +46,15 @@ public partial class Inventory : Node2D {
     /// the children of which are empty nodes to occupy the space for each box in the grid.<br></br>
     /// Item nodes are then childed to the empty box nodes.
     /// </summary>
-    private void CreateUI() {
+    private void CreateUI () {
         ingredientGrid = FillGrid(4, 8);
         potionGrid = FillGrid(2, 8);
 
         ingredientGrid.Name = "Ingredients";
         potionGrid.Name = "Potions";
+
+        ingredientGrid.SetMeta("type", (int) InventoryType.ingredient);
+        potionGrid.SetMeta("type", (int) InventoryType.potion);
 
         // Create ingredient nodes
         List<IngredientNode> ingredientNodes = new();
@@ -77,7 +80,7 @@ public partial class Inventory : Node2D {
     /// using 'spacing' to determine how far apart the items should be (specified in the engine)
     /// </summary>
     /// <returns></returns>
-    private Node2D FillGrid(int rows, int columns) {
+    private Node2D FillGrid (int rows, int columns) {
         Node2D grid = new();
 
         // Create objects in a grid, spaced by 'spacing'        
@@ -99,20 +102,29 @@ public partial class Inventory : Node2D {
 
     public void ToggleDisplay () {
         var children = GetChildren().Cast<Node2D>();
+        active = !active;
 
         foreach (Node2D child in children) {
-            active = !active;
-            child.Visible = active;
+            if ((int) child.GetMeta("type") == (int) currentInventory)
+                child.Visible = active;
         }
     }
 
-    public void SwitchInventory() {
+    public void SwitchInventory () {
         switch (currentInventory) {
         case InventoryType.ingredient:
             currentInventory = InventoryType.potion;
+
+            ingredientGrid.Visible = true;
+            potionGrid.Visible = false;
+
             break;
         case InventoryType.potion:
             currentInventory = InventoryType.ingredient;
+
+            potionGrid.Visible = true;
+            ingredientGrid.Visible = false;
+
             break;
         }
     }
