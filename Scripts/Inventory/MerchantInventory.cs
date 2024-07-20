@@ -2,10 +2,7 @@ using Godot;
 using System;
 using System.IO;
 
-public partial class MerchantInventory : Inventory
-{
-    private readonly Random random = new();
-
+public partial class MerchantInventory : Inventory {
     private IngredientData[] ingredientCodex;
 
     double timer = 0;
@@ -22,10 +19,6 @@ public partial class MerchantInventory : Inventory
             ingredientCodex[i] = ingredient;
         }
 
-        StartPos = new(20, 20);
-        Margin = new(20, 20);
-        Offset = new(50, 50);
-
         CreateStock();
 
         foreach(var ing in ingredients) {
@@ -33,15 +26,13 @@ public partial class MerchantInventory : Inventory
 
             GD.Print(format);
         }
-
-        CreateUI();
     }
 
     public override void _Process (double delta) {
     }
 
     private void CreateStock() {
-        int stockCount = random.Next(10, 17);
+        int stockCount = GD.RandRange(10, 16);
 
         ingredients = new(stockCount);
 
@@ -51,7 +42,7 @@ public partial class MerchantInventory : Inventory
     }
 
     private IngredientData GetRandomItem() {
-        int index = random.Next(ingredientCodex.Length);
+        int index = GD.RandRange(0, ingredientCodex.Length - 1);
 
         Quality quality = GetRandomQuality();
 
@@ -68,11 +59,11 @@ public partial class MerchantInventory : Inventory
     private Quality GetRandomQuality() {
         Quality quality = Quality.Normal;
 
-        if (random.Next(3) == 0) {
+        if (GD.RandRange(0, 2) == 0) {
             quality = Quality.Good;
-            if (random.Next(3) == 0) {
+            if (GD.RandRange(0, 2) == 0) {
                 quality = Quality.Great;
-                if (random.Next(3) == 0) {
+                if (GD.RandRange(0, 2) == 0) {
                     quality = Quality.Exquisite;
                 }
             }

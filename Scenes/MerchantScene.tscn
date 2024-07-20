@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://m4c7uwwo5npk"]
+[gd_scene load_steps=2 format=3 uid="uid://m4c7uwwo5npk"]
+
+[ext_resource type="Texture2D" uid="uid://doeg5w6kfvurd" path="res://Textures/Trash/MERCHANT.png" id="1_um1ju"]
 
 [node name="MerchantScene" type="Node2D"]
+
+[node name="Merchant" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(512, 384)
+texture = ExtResource("1_um1ju")
