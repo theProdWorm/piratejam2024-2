@@ -9,6 +9,7 @@ public partial class Inventory : Node2D {
         potion
     }
 
+    [Export] public Vector2 startPos;
     [Export] public Vector2 margin;
     [Export] public Vector2 offset;
 
@@ -22,6 +23,8 @@ public partial class Inventory : Node2D {
     Node2D potionGrid;
 
     public override void _Ready () {
+        margin = new(100, 100);
+
         currentInventory = InventoryType.ingredient;
 
         ingredients.Add(new() {
@@ -81,7 +84,9 @@ public partial class Inventory : Node2D {
     /// </summary>
     /// <returns></returns>
     private Node2D FillGrid (int rows, int columns) {
-        Node2D grid = new();
+        Node2D grid = new() {
+            Transform = new(0, startPos)
+        };
 
         // Create objects in a grid, spaced by 'spacing'        
         for (int y = 0; y < rows; y++) {
