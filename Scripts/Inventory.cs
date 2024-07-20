@@ -23,17 +23,22 @@ public partial class Inventory : Node2D {
     Node2D potionGrid;
 
     public override void _Ready () {
-        margin = new(100, 100);
+        margin = new(20, 20);
+        offset = new(100, 100);
+        startPos = new(100, 100);
 
         currentInventory = InventoryType.ingredient;
 
-        ingredients.Add(new() {
-            Name = "Spider",
-            Price = 69,
-            Quality = Quality.Superb,
-            Texture = ResourceLoader.Load<Texture2D>("res://Textures/Red.png"),
-            HaggleValue = 0.75f
-        });
+        for (int i = 0; i < 10; i++) {
+
+            ingredients.Add(new() {
+                Name = "Spider",
+                Price = 69,
+                Quality = Quality.Superb,
+                Texture = ResourceLoader.Load<Texture2D>("res://Textures/Red.png"),
+                HaggleValue = 0.75f
+            });
+        }
 
         CreateUI();
 
@@ -93,7 +98,10 @@ public partial class Inventory : Node2D {
             for (int x = 0; x < columns; x++) {
                 Node2D box = new();
 
-                Vector2 pos = new(margin.X * (x + 1) + offset.X, margin.Y * (y + 1) + offset.Y);
+                float xPos = (x + 1) * margin.X + x * offset.X;
+                float yPos = (y + 1) * margin.Y + y * offset.Y;
+
+                Vector2 pos = new(xPos, yPos);
                 box.Transform = new(0, pos);
 
                 box.Name = $"{x}, {y}";
