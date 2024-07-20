@@ -1,7 +1,13 @@
 using Godot;
 
+public enum Quality {
+    Good,
+    Superb,
+    Perfect
+}
+
 [GlobalClass]
-public partial class ItemData : Resource
+public abstract partial class ItemData : Resource
 {
     [Export] public string Name { get; set; }
     [Export] public int Price { get; set; }

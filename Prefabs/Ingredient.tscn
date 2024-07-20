@@ -1,6 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ccgi0uxws6ts4"]
+[gd_scene load_steps=3 format=3 uid="uid://ccgi0uxws6ts4"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientNode.cs" id="1_wj7it"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhsnl"]
+
 [node name="Ingredient" type="Sprite2D"]
 script = ExtResource("1_wj7it")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_jhsnl")

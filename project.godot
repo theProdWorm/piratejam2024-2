@@ -33,6 +33,11 @@ GlobalInventory="*res://Scripts/Inventory.cs"
 
 settings/stdout/verbose_stdout=true
 
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=768
+
 [dotnet]
 
 project/assembly_name="Piratejam2024-2"

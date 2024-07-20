@@ -6,12 +6,6 @@ public enum PrepMethod {
     Crushing
 }
 
-public enum Quality {
-    Bad,
-    Good,
-    Great
-}
-
 [GlobalClass]
 public partial class IngredientData : ItemData {
     [Export] public Array<PrepMethod> StepsToPrepare { get; set; }
