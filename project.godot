@@ -27,7 +27,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-GlobalInventory="*res://Scripts/Inventory.cs"
+PlayerInventory="*res://Scripts/Inventory/PlayerInventory.cs"
+MerchantInventory="*res://Scripts/Inventory/MerchantInventory.cs"
 
 [debug]
 

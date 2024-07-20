@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=3 format=3 uid="uid://debu6uro6l7v"]
+
+[ext_resource type="Texture2D" uid="uid://bo08bn8buu3uy" path="res://Textures/Trash/Green.png" id="1_e1fyr"]
+[ext_resource type="Script" path="res://Scripts/Data Classes/IngredientData.cs" id="1_h7pr8"]
+
+[resource]
+script = ExtResource("1_h7pr8")
+StepsToPrepare = Array[int]([0, 1])
+Name = "Green"
+Price = 69
+Texture = ExtResource("1_e1fyr")

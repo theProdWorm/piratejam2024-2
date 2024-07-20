@@ -1,7 +1,7 @@
 using Godot;
 
 public partial class IngredientNode : Sprite2D {
-    public IngredientData data;
+    [Export] public IngredientData data;
 
     public IngredientNode() { }
 
