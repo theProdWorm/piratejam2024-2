@@ -10,6 +10,8 @@ public partial class MerchantInventory : Inventory {
 
     public override void _Ready () {
 
+        // Load ingredients dynamically. This way, ingredients can be added
+        // to the project without changing the code.
         string[] ingredientPaths = Directory.GetFiles("Items/Ingredients");
 
         ingredientCodex = new IngredientData[ingredientPaths.Length];
@@ -21,11 +23,7 @@ public partial class MerchantInventory : Inventory {
 
         CreateStock();
 
-        foreach(var ing in ingredients) {
-            string format = $"Name: {ing.Name}, Quality: {ing.ItemQuality}";
-
-            GD.Print(format);
-        }
+        CreateIngredientUI();
     }
 
     public override void _Process (double delta) {

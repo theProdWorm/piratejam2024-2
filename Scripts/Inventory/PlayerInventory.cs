@@ -21,13 +21,18 @@ public partial class PlayerInventory : Inventory {
     }
 
     protected void CreatePotionUI () {
-        Node2D potionGrid = new();
-
-        potionGrid.Name = "Potions";
+        Node2D ui = (Node2D) GetNode("Potions");
 
         List<PotionNode> potionNodes = new();
-        potions.ForEach(pot => potionNodes.Add(new(pot)));
+        potions.ForEach(pot => {
+            var prefab = ResourceLoader.Load<PackedScene>("Prefabs/Potion.tscn");
+            var potion = prefab.Instantiate<PotionNode>();
 
-        AddChild(potionGrid);
+            potion.data = pot;
+
+            potionNodes.Add(potion);
+        });
+
+        AddChild(ui);
     }
 }

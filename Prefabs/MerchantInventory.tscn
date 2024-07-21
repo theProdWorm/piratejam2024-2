@@ -1,3 +1,62 @@
-[gd_scene format=3 uid="uid://dcxfexwphf8xb"]
+[gd_scene load_steps=3 format=3 uid="uid://dcxfexwphf8xb"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/MerchantInventory.cs" id="1_a0igs"]
+[ext_resource type="Texture2D" uid="uid://doeg5w6kfvurd" path="res://Textures/Trash/MERCHANT.png" id="2_h10ij"]
 
 [node name="MerchantInventory" type="Node2D"]
+script = ExtResource("1_a0igs")
+
+[node name="Ingredients" type="Node2D" parent="."]
+
+[node name="1,1" type="Node2D" parent="Ingredients"]
+position = Vector2(206, 360)
+
+[node name="1,2" type="Node2D" parent="Ingredients"]
+position = Vector2(298, 360)
+
+[node name="1,3" type="Node2D" parent="Ingredients"]
+position = Vector2(388, 360)
+
+[node name="1,4" type="Node2D" parent="Ingredients"]
+position = Vector2(477, 360)
+
+[node name="1,5" type="Node2D" parent="Ingredients"]
+position = Vector2(564, 360)
+
+[node name="1,6" type="Node2D" parent="Ingredients"]
+position = Vector2(649, 360)
+
+[node name="1,7" type="Node2D" parent="Ingredients"]
+position = Vector2(740, 360)
+
+[node name="1,8" type="Node2D" parent="Ingredients"]
+position = Vector2(835, 360)
+
+[node name="2,1" type="Node2D" parent="Ingredients"]
+position = Vector2(168, 432)
+
+[node name="2,2" type="Node2D" parent="Ingredients"]
+position = Vector2(272, 432)
+
+[node name="2,3" type="Node2D" parent="Ingredients"]
+position = Vector2(376, 432)
+
+[node name="2,4" type="Node2D" parent="Ingredients"]
+position = Vector2(472, 432)
+
+[node name="2,5" type="Node2D" parent="Ingredients"]
+position = Vector2(568, 432)
+
+[node name="2,6" type="Node2D" parent="Ingredients"]
+position = Vector2(664, 432)
+
+[node name="2,7" type="Node2D" parent="Ingredients"]
+position = Vector2(768, 432)
+
+[node name="2,8" type="Node2D" parent="Ingredients"]
+position = Vector2(872, 432)
+
+[node name="Merchant" type="Sprite2D" parent="."]
+z_index = -3
+position = Vector2(519, 374)
+texture = ExtResource("2_h10ij")

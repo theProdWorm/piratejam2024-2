@@ -1,3 +1,6 @@
-[gd_scene format=3 uid="uid://dfjcn7775io4v"]
+[gd_scene load_steps=2 format=3 uid="uid://dfjcn7775io4v"]
+
+[ext_resource type="Script" path="res://Scripts/Inventory/PlayerInventory.cs" id="1_fygfe"]
 
 [node name="PlayerInventory" type="Node2D"]
+script = ExtResource("1_fygfe")

@@ -1,7 +1,7 @@
 using Godot;
 
-public partial class PotionNode : Sprite2D {
-    public PotionData data;
+public partial class PotionNode : ItemNode {
+    [Export] public PotionData data;
 
     public PotionNode() { }
 

@@ -15,28 +15,33 @@ public abstract partial class Inventory : Node2D {
     }
 
     /// <summary>
-    /// Create the ingredient UI grid.<br></br>
-    /// Hierarchy has the grid as the first child of inventory,
-    /// the children of which are empty nodes to occupy the space for each box in the grid.<br></br>
-    /// Item nodes are then childed to the empty box nodes.
+    /// Create the ingredient UI.<br></br>
+    /// Hierarchy has the ui as the first child of inventory,
+    /// the children of which are positional nodes for easy editing.<br></br>
+    /// Item nodes are then childed to the positional nodes.
     /// </summary>
-    public void CreateIngredientUI (Node2D[] gridNodes) {
-        Node2D ui = new() {
-            Name = "Ingredients"
-        };
+    public void CreateIngredientUI () {
+        Node2D ui = (Node2D) GetNode("Ingredients");
 
-        // Create ingredient nodes
+        // Create ingredient nodes.
+        // These are the nodes that will later be childed to the positional nodes in 'ui'
         List<IngredientNode> ingredientNodes = new();
-        ingredients.ForEach(ing => ingredientNodes.Add(new(ing)));
+        ingredients.ForEach(ing => {
+            var prefab = ResourceLoader.Load<PackedScene>("Prefabs/Ingredient.tscn");
+            var node = prefab.Instantiate<IngredientNode>();
+
+            node.data = ing;
+            node.Name = ing.Name;
+
+            ingredientNodes.Add(node);
+        });
 
         for (int i = 0; i < ingredientNodes.Count; i++) {
-            var gridBox = ui.GetChild(i);
+            var posNode = ui.GetChild(i);
             var ingredientNode = ingredientNodes[i];
 
-            gridBox.AddChild(ingredientNode);
+            posNode.AddChild(ingredientNode);
         }
-
-        AddChild(ui);
     }
 
     public virtual void DestroyUI() {

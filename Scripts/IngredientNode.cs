@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class IngredientNode : Sprite2D {
+public partial class IngredientNode : ItemNode {
     [Export] public IngredientData data;
 
     public IngredientNode() { }
@@ -11,6 +11,7 @@ public partial class IngredientNode : Sprite2D {
     }
 
     public override void _Ready () {
+        base._Ready ();
         Texture = data.Texture;
     }
 }
