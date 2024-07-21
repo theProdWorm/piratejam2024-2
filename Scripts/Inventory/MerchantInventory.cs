@@ -5,9 +5,6 @@ using System.IO;
 public partial class MerchantInventory : Inventory {
     private IngredientData[] ingredientCodex;
 
-    double timer = 0;
-
-
     public override void _Ready () {
 
         // Load ingredients dynamically. This way, ingredients can be added
