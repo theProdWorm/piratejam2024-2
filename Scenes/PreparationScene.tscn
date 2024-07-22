@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bdpy76od4lylg"]
+[gd_scene load_steps=9 format=3 uid="uid://c8an8lbhymkg2"]
 
 [ext_resource type="Script" path="res://Scripts/Scene scripts/PreparationScene.cs" id="1_r5qbm"]
-[ext_resource type="Texture2D" uid="uid://cyxayow0behnw" path="res://Preparation_Table.png" id="2_2pehx"]
-[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Preparation_Cutting.png" id="3_ltn2y"]
+[ext_resource type="Texture2D" uid="uid://cyxayow0behnw" path="res://Textures/Preparation_Table.png" id="2_2pehx"]
+[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Textures/Preparation_Cutting.png" id="3_ltn2y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6h5d"]
 

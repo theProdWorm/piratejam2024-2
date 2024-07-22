@@ -1,5 +1,4 @@
 using Godot;
-using Godot.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -20,7 +19,6 @@ public abstract partial class Inventory : Node2D {
             var ingredient = ResourceLoader.Load<IngredientData>(ingredientPaths[i]);
             ingredientCodex[i] = ingredient;
         }
-
     }
 
     protected IngredientData GetRandomItem () {

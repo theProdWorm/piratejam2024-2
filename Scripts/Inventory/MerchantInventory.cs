@@ -1,13 +1,10 @@
 using Godot;
-using System;
-using System.IO;
 
 public partial class MerchantInventory : Inventory {
 
     public override void _Ready () {
-        // Load ingredients dynamically. This way, ingredients can be added
-        // to the project without changing the code.
-        
+        base._Ready();
+
         CreateStock();
 
         CreateIngredientUI();
