@@ -14,9 +14,8 @@
     }
   },
   "recent_paths": [
-    "res://Resources/",
-    "res://Resources/Items/",
-    "res://Items/Ingredients/"
+    "res://Items/Ingredients/",
+    "res://.godot"
   ],
   "table_functions": {
     "filter": [

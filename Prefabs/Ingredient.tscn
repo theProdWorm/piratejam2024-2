@@ -1,14 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccgi0uxws6ts4"]
+[gd_scene load_steps=3 format=3 uid="uid://ccgi0uxws6ts4"]
 
 [ext_resource type="Script" path="res://Scripts/IngredientNode.cs" id="1_wj7it"]
-[ext_resource type="Texture2D" uid="uid://cpmp5juyxcwli" path="res://Textures/Trash/Blue.png" id="1_xdmo4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jhsnl"]
 size = Vector2(50, 50)
 
 [node name="Ingredient" type="Sprite2D"]
-position = Vector2(1, 0)
-texture = ExtResource("1_xdmo4")
 script = ExtResource("1_wj7it")
 
 [node name="CharacterBody2D" type="AnimatableBody2D" parent="."]

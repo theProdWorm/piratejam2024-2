@@ -7,6 +7,8 @@ public partial class ItemNode : Sprite2D {
     protected bool isHovering = false;
     protected bool isHolding = false;
 
+    protected Action ItemDropped;
+
     public override void _Ready () {
         collider = GetChild<AnimatableBody2D>(0);
         collider.InputPickable = true;
@@ -20,6 +22,10 @@ public partial class ItemNode : Sprite2D {
             GD.Print("No longer hovering over: " + Name);
             isHovering = false;
         };
+
+        ItemDropped = () => {
+            GlobalPosition = ((Node2D) GetParent()).GlobalPosition;
+        };
     }
 
     public override void _Process (double delta) {
@@ -27,11 +33,7 @@ public partial class ItemNode : Sprite2D {
             isHolding = true;
         }
         else if (Input.IsActionJustReleased("click") && isHolding) {
-            isHolding = false;
-
-            //TODO: check if the item is released on a minigame
-
-            GlobalPosition = ((Node2D) GetParent()).GlobalPosition;
+            ItemDropped();
         }
 
         if (isHolding) {

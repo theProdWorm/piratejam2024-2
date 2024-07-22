@@ -1,4 +1,5 @@
 using Godot;
+using Godot.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,12 +8,6 @@ public abstract partial class Inventory : Node2D {
     public List<IngredientData> ingredients;
 
     protected bool active = true;
-
-    public override void _Ready () {
-    }
-
-    public override void _Process (double delta) {
-    }
 
     /// <summary>
     /// Create the ingredient UI.<br></br>
@@ -50,6 +45,11 @@ public abstract partial class Inventory : Node2D {
                 node.QueueFree();
             }
         }
+    }
+
+    public virtual void UpdateUI() {
+        DestroyUI();
+        CreateIngredientUI();
     }
 
     public virtual void ToggleDisplay () {

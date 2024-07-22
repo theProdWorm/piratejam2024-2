@@ -1,6 +1,5 @@
 ﻿using Godot;
 using System.Collections.Generic;
-using System.Linq;
 
 public partial class PlayerInventory : Inventory {
     public List<PotionData> potions;
@@ -10,29 +9,36 @@ public partial class PlayerInventory : Inventory {
         ingredients = new(32);
 
         for (int i = 0; i < 10; i++) {
-            ingredients.Add(new() {
-                Name = "Spider",
-                Price = 69,
-                ItemQuality = Quality.Good,
-                Texture = ResourceLoader.Load<Texture2D>("res://Textures/Trash/Red.png"),
-                HaggleValue = 0
-            });
+            var ingredient = ResourceLoader.Load<IngredientData>("Items/Ingredients/Mermaid Tears.tres");
+
+            ingredients.Add(ingredient);
         }
+
+        CreateIngredientUI();
     }
 
     protected void CreatePotionUI () {
         Node2D ui = (Node2D) GetNode("Potions");
 
         List<PotionNode> potionNodes = new();
-        potions.ForEach(pot => {
+        foreach(var pot in potions) {
             var prefab = ResourceLoader.Load<PackedScene>("Prefabs/Potion.tscn");
             var potion = prefab.Instantiate<PotionNode>();
 
             potion.data = pot;
 
             potionNodes.Add(potion);
-        });
+        };
+
+        for (int i = 0; i < potionNodes.Count; i++) {
+            ui.GetChild(i).AddChild(potionNodes[i]);
+        }
 
         AddChild(ui);
+    }
+
+    public override void UpdateUI () {
+        base.UpdateUI();
+        CreatePotionUI();
     }
 }

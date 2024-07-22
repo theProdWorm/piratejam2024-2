@@ -3,12 +3,13 @@ using Godot.Collections;
 
 public enum PrepMethod {
     Cutting,
-    Crushing
+    Crushing,
+    None
 }
 
 [GlobalClass]
 public partial class IngredientData : ItemData {
-    [Export] public Array<PrepMethod> StepsToPrepare { get; set; }
+    [Export] public PrepMethod PrepMethod { get; set; }
     public float HaggleValue { get; set; }
 
     public IngredientData() { }
@@ -19,7 +20,7 @@ public partial class IngredientData : ItemData {
         Texture = other.Texture;
         ItemQuality = other.ItemQuality;
 
-        StepsToPrepare = other.StepsToPrepare;
+        PrepMethod = other.PrepMethod;
         HaggleValue = other.HaggleValue;
     }
 }
