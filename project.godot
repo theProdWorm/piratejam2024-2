@@ -25,6 +25,10 @@ run/main_scene="res://Scenes/MerchantScene.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+PlayerInventory="*res://Prefabs/PlayerInventory.tscn"
+
 [debug]
 
 settings/stdout/verbose_stdout=true

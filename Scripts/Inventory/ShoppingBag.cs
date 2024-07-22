@@ -2,10 +2,15 @@ using Godot;
 using System;
 
 public partial class ShoppingBag : Inventory {
+    PlayerInventory playerInventory;
+
     public override void _Ready () {
         base._Ready();
 
-        ingredients = new(9);
+        playerInventory = (PlayerInventory) GetNode("/root/PlayerInventory");
+
+        int openSlots = playerInventory.ingredients.Capacity - playerInventory.ingredients.Count;
+        ingredients = new(openSlots > 9 ? 9 : openSlots);
 
         CreateIngredientUI();
     }
@@ -18,5 +23,23 @@ public partial class ShoppingBag : Inventory {
         }
 
         return totalValue;
+    }
+
+    public bool ConfirmPurchase() {
+        int totalValue = GetTotalValue();
+        bool canAfford = playerInventory.balance - totalValue >= 0;
+
+        if (!canAfford){
+            GD.Print($"Can't afford! Current balance: {playerInventory.balance}\nCost of items: {totalValue}");
+
+            return false;
+        }
+
+        playerInventory.ingredients.AddRange(ingredients);
+        playerInventory.balance -= totalValue;
+
+        GD.Print($"Paid {totalValue} coins. New balance: {playerInventory.balance}");
+
+        return true;
     }
 }

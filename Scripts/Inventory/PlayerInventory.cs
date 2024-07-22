@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public partial class PlayerInventory : Inventory {
     public List<PotionData> potions;
 
-    public int money;
+    public int balance = 100;
     public IngredientData shopRequest;
 
 
@@ -18,8 +18,6 @@ public partial class PlayerInventory : Inventory {
 
             ingredients.Add(ingredient);
         }
-
-        CreateIngredientUI();
     }
 
     protected void CreatePotionUI () {
