@@ -2,7 +2,7 @@ using Godot;
 using System;
 
 public partial class ItemNode : Sprite2D {
-    public AnimatableBody2D collider;
+    public CollisionObject2D collider;
     
     protected bool isHovering = false;
     protected bool isHolding = false;
@@ -10,16 +10,14 @@ public partial class ItemNode : Sprite2D {
     protected Action ItemDropped;
 
     public override void _Ready () {
-        collider = GetChild<AnimatableBody2D>(0);
+        collider = GetChild<CollisionObject2D>(0);
         collider.InputPickable = true;
         collider.CollisionLayer = 45;
 
         collider.MouseEntered += () => {
-            GD.Print("Hovering over: " + Name);
             isHovering = true;
         };
         collider.MouseExited += () => {
-            GD.Print("No longer hovering over: " + Name);
             isHovering = false;
         };
 

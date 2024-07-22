@@ -16,7 +16,7 @@ public partial class MerchantInventory : Inventory {
     private void CreateStock() {
         int stockCount = GD.RandRange(10, 16);
 
-        ingredients = new(stockCount);
+        ingredients = new(16);
 
         for (int i = 0; i < stockCount; i++) {
             ingredients.Add(GetRandomItem());

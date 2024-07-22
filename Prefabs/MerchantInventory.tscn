@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcxfexwphf8xb"]
+[gd_scene load_steps=4 format=3 uid="uid://dcxfexwphf8xb"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/MerchantInventory.cs" id="1_a0igs"]
 [ext_resource type="Texture2D" uid="uid://cogtgpna4nprk" path="res://Textures/Trash/MERCHANT.png" id="2_h10ij"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kugw8"]
+size = Vector2(846, 190)
 
 [node name="MerchantInventory" type="Node2D"]
 script = ExtResource("1_a0igs")
@@ -61,3 +64,10 @@ position = Vector2(865, 438)
 z_index = -4
 position = Vector2(512, 384)
 texture = ExtResource("2_h10ij")
+
+[node name="Area2D" type="Area2D" parent="."]
+priority = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(512, 415)
+shape = SubResource("RectangleShape2D_kugw8")

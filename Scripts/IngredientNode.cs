@@ -4,27 +4,58 @@ using Godot;
 public partial class IngredientNode : ItemNode {
     [Export] public IngredientData data;
 
-    public IngredientNode() { }
+    public IngredientNode () { }
 
-    public IngredientNode(IngredientData data) {
+    public IngredientNode (IngredientData data) {
         this.data = data;
         Name = data.Name;
     }
 
     public override void _Ready () {
-        base._Ready ();
+        base._Ready();
         Texture = data.Texture;
 
         ItemDropped = () => {
             isHolding = false;
 
-            //TODO: check where the item is dropped
-            if(false /*dropped on minigame*/) {
+            var raycastPrefab = ResourceLoader.Load<PackedScene>("Prefabs/Casts/IngredientCast.tscn");
+            var raycast = raycastPrefab.Instantiate<RayCast2D>();
+
+            GetTree().Root.AddChild(raycast);
+
+            raycast.GlobalPosition = GetViewport().GetMousePosition();
+
+            raycast.ForceRaycastUpdate();
+
+            GD.Print(raycast.IsNodeReady());
+
+            if (raycast.IsColliding()) {
+                GD.Print("colit");
+
+                var otherCollider = (CollisionObject2D) raycast.GetCollider();
+
+                Inventory targetInventory = (Inventory) otherCollider.GetParent();
+                Inventory currentInventory = (Inventory) GetParent().GetParent().GetParent();
+
+                if (targetInventory == currentInventory ||
+                    targetInventory.ingredients.Count == targetInventory.ingredients.Capacity)
+                    goto setpos;
+
+                int index = currentInventory.ingredients.IndexOf(data);
+
+                if (targetInventory != null) {
+                    Inventory.TransferIngredient(index, currentInventory, targetInventory);
+                }
+
+                return;
+            }
+
+            else if (false      /*dropped on minigame*/       ) {
 
             }
-            else {
-                GlobalPosition = ((Node2D) GetParent()).GlobalPosition;
-            }
+
+            setpos:
+            GlobalPosition = ((Node2D) GetParent()).GlobalPosition;
         };
     }
 }

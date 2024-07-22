@@ -85,7 +85,8 @@ public abstract partial class Inventory : Node2D {
     public virtual void DestroyUI() {
         foreach (var ui in GetChildren()) {
             foreach (var posNode in ui.GetChildren()) {
-                posNode.GetChild(0).QueueFree();
+                if(posNode.GetChildCount() > 0)
+                    posNode.GetChild(0).QueueFree();
             }
         }
     }
@@ -96,8 +97,11 @@ public abstract partial class Inventory : Node2D {
     }
     #endregion
 
-    public static void Transfer<T> (int index, List<T> from, List<T> to) {
-        to.Add(from[index]);
-        from.RemoveAt(index);
+    public static void TransferIngredient (int index, Inventory from, Inventory to) {
+        to.ingredients.Add(from.ingredients[index]);
+        from.ingredients.RemoveAt(index);
+
+        from.UpdateUI();
+        to.UpdateUI();
     }
 }

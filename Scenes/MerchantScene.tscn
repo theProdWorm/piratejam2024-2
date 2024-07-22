@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://m4c7uwwo5npk"]
+[gd_scene load_steps=3 format=3 uid="uid://m4c7uwwo5npk"]
 
 [ext_resource type="PackedScene" uid="uid://dcxfexwphf8xb" path="res://Prefabs/MerchantInventory.tscn" id="1_v52o5"]
+[ext_resource type="PackedScene" uid="uid://gbsb1rqlb0rf" path="res://Prefabs/ShoppingBag.tscn" id="2_nihnv"]
 
 [node name="MerchantScene" type="Node2D"]
 
 [node name="MerchantInventory" parent="." instance=ExtResource("1_v52o5")]
+
+[node name="ShoppingBag" parent="." instance=ExtResource("2_nihnv")]
+position = Vector2(205, 611)

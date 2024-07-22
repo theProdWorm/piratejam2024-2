@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bvtva4gi1tb0t"]
+
+[node name="PotionCast" type="RayCast2D"]
+target_position = Vector2(0, 0)
+collision_mask = 2
+collide_with_areas = true
+collide_with_bodies = false
