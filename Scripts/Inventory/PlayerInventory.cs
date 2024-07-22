@@ -4,6 +4,11 @@ using System.Collections.Generic;
 public partial class PlayerInventory : Inventory {
     public List<PotionData> potions;
 
+    public int money;
+    public IngredientData shopRequest;
+
+
+
     public override void _Ready () {
         potions = new(16);
         ingredients = new(32);
@@ -38,7 +43,7 @@ public partial class PlayerInventory : Inventory {
     }
 
     public override void UpdateUI () {
-        base.UpdateUI();
-        CreatePotionUI();
+        DestroyUI();
+
     }
 }

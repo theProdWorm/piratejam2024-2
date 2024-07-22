@@ -1,13 +1,58 @@
 using Godot;
 using Godot.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 [GlobalClass]
 public abstract partial class Inventory : Node2D {
+    private IngredientData[] ingredientCodex;
     public List<IngredientData> ingredients;
 
     protected bool active = true;
+
+    public override void _Ready () {
+        string[] ingredientPaths = Directory.GetFiles("Items/Ingredients");
+
+        ingredientCodex = new IngredientData[ingredientPaths.Length];
+
+        for (int i = 0; i < ingredientPaths.Length; i++) {
+            var ingredient = ResourceLoader.Load<IngredientData>(ingredientPaths[i]);
+            ingredientCodex[i] = ingredient;
+        }
+
+    }
+
+    protected IngredientData GetRandomItem () {
+        int index = GD.RandRange(0, ingredientCodex.Length - 1);
+
+        Quality quality = GetRandomQuality();
+
+        float haggleValue = 0; // TODO: change when HaggleValue is relevant
+
+        IngredientData item = new(ingredientCodex[index]) {
+            ItemQuality = quality,
+            HaggleValue = haggleValue
+        };
+
+        return item;
+    }
+
+    protected Quality GetRandomQuality () {
+        Quality quality = Quality.Normal;
+
+        if (GD.RandRange(0, 2) == 0) {
+            quality = Quality.Good;
+            if (GD.RandRange(0, 2) == 0) {
+                quality = Quality.Great;
+                if (GD.RandRange(0, 2) == 0) {
+                    quality = Quality.Exquisite;
+                }
+            }
+        }
+
+        return quality;
+    }
 
     /// <summary>
     /// Create the ingredient UI.<br></br>
