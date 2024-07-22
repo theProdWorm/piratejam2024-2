@@ -1,0 +1,7 @@
+﻿[*.cs]
+
+# Default severity for analyzer diagnostics with category 'Design'
+dotnet_analyzer_diagnostic.category-Design.severity = none
+
+# CS0660: Type defines operator == or operator != but does not override Object.Equals(object o)
+dotnet_diagnostic.CS0660.severity = none

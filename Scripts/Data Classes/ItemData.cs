@@ -15,7 +15,7 @@ public abstract partial class ItemData : Resource
     [Export] public Texture2D Texture { get; set; }
     public Quality ItemQuality { get; set; }
 
-    public int GetRealPrice() {
+    public virtual int GetRealPrice() {
         if(ItemQuality == Quality.Normal)
             return Price;
 

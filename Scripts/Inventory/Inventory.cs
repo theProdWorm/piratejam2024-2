@@ -1,14 +1,11 @@
 using Godot;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 
 [GlobalClass]
 public abstract partial class Inventory : Node2D {
     private IngredientData[] ingredientCodex;
     public List<IngredientData> ingredients;
-
-    protected bool active = true;
 
     public override void _Ready () {
         string[] ingredientPaths = Directory.GetFiles("Items/Ingredients");
@@ -21,6 +18,7 @@ public abstract partial class Inventory : Node2D {
         }
     }
 
+    #region Random item generation
     public IngredientData GetRandomItem () {
         int index = GD.RandRange(0, ingredientCodex.Length - 1);
 
@@ -51,7 +49,9 @@ public abstract partial class Inventory : Node2D {
 
         return quality;
     }
+    #endregion
 
+    #region UI
     /// <summary>
     /// Create the ingredient UI.<br></br>
     /// Hierarchy has the ui as the first child of inventory,
@@ -83,9 +83,9 @@ public abstract partial class Inventory : Node2D {
     }
 
     public virtual void DestroyUI() {
-        foreach (var grid in GetChildren()) {
-            foreach (var node in grid.GetChildren()) {
-                node.QueueFree();
+        foreach (var ui in GetChildren()) {
+            foreach (var posNode in ui.GetChildren()) {
+                posNode.GetChild(0).QueueFree();
             }
         }
     }
@@ -94,13 +94,10 @@ public abstract partial class Inventory : Node2D {
         DestroyUI();
         CreateIngredientUI();
     }
+    #endregion
 
-    public virtual void ToggleDisplay () {
-        var children = GetChildren().Cast<Node2D>();
-        active = !active;
-
-        foreach (Node2D child in children) {
-            child.Visible = active;
-        }
+    public static void Transfer<T> (int index, List<T> from, List<T> to) {
+        to.Add(from[index]);
+        from.RemoveAt(index);
     }
 }
