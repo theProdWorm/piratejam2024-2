@@ -21,7 +21,7 @@ public abstract partial class Inventory : Node2D {
         }
     }
 
-    protected IngredientData GetRandomItem () {
+    public IngredientData GetRandomItem () {
         int index = GD.RandRange(0, ingredientCodex.Length - 1);
 
         Quality quality = GetRandomQuality();
@@ -36,7 +36,7 @@ public abstract partial class Inventory : Node2D {
         return item;
     }
 
-    protected Quality GetRandomQuality () {
+    public Quality GetRandomQuality () {
         Quality quality = Quality.Normal;
 
         if (GD.RandRange(0, 2) == 0) {
