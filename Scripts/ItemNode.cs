@@ -1,9 +1,10 @@
 using Godot;
 using System;
+using System.Linq;
 
 public partial class ItemNode : Sprite2D {
     public CollisionObject2D collider;
-    
+
     protected bool isHovering = false;
     protected bool isHolding = false;
 

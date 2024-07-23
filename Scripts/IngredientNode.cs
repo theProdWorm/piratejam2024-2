@@ -1,8 +1,9 @@
 using Godot;
+using System.Linq;
 
 [GlobalClass]
 public partial class IngredientNode : ItemNode {
-    [Export] public IngredientData data;
+    public IngredientData data;
 
     public IngredientNode () { }
 
@@ -13,6 +14,13 @@ public partial class IngredientNode : ItemNode {
 
     public override void _Ready () {
         base._Ready();
+
+        var qualityNodes = (from a in GetChildren() where a.Name.ToString().StartsWith("Quality") select a).Cast<Node2D>().ToArray();
+
+        for (int i = 0; i < (int) data.ItemQuality; i++) {
+            qualityNodes[i].Visible = true;
+        }
+
         Texture = data.Texture;
 
         ItemDropped = () => {
