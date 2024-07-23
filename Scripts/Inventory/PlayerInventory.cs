@@ -11,13 +11,7 @@ public partial class PlayerInventory : Inventory {
 
     public override void _Ready () {
         potions = new(16);
-        ingredients = new(24);
-
-        for (int i = 0; i < 10; i++) {
-            var ingredient = ResourceLoader.Load<IngredientData>("Items/Ingredients/Mermaid Tears.tres");
-
-            ingredients.Add(ingredient);
-        }
+        ingredients = new(21);
     }
 
     protected void CreatePotionUI () {

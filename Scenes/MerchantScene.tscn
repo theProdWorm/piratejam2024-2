@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://m4c7uwwo5npk"]
 
-[ext_resource type="PackedScene" uid="uid://dcxfexwphf8xb" path="res://Prefabs/MerchantInventory.tscn" id="1_v52o5"]
-[ext_resource type="PackedScene" uid="uid://gbsb1rqlb0rf" path="res://Prefabs/ShoppingBag.tscn" id="2_nihnv"]
+[ext_resource type="PackedScene" uid="uid://dcxfexwphf8xb" path="res://Prefabs/Inventory/MerchantInventory.tscn" id="1_v52o5"]
+[ext_resource type="PackedScene" uid="uid://gbsb1rqlb0rf" path="res://Prefabs/Inventory/ShoppingBag.tscn" id="2_nihnv"]
 [ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp-Book.ttf" id="3_ybfu4"]
 [ext_resource type="FontFile" uid="uid://cigsl3xyk3q5n" path="res://Textures/Fonts/MedievalSharp-Bold.ttf" id="4_iq3fn"]
 [ext_resource type="FontFile" uid="uid://bp75jtoyia0wy" path="res://Textures/Fonts/MedievalSharp-BookOblique.ttf" id="5_wlgvn"]
@@ -22,7 +22,6 @@
 [node name="MerchantInventory" parent="." instance=ExtResource("1_v52o5")]
 
 [node name="ShoppingBag" parent="." instance=ExtResource("2_nihnv")]
-position = Vector2(205, 611)
 
 [node name="Balance" type="RichTextLabel" parent="."]
 offset_left = 22.0

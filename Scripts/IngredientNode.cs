@@ -27,11 +27,7 @@ public partial class IngredientNode : ItemNode {
 
             raycast.ForceRaycastUpdate();
 
-            GD.Print(raycast.IsNodeReady());
-
             if (raycast.IsColliding()) {
-                GD.Print("colit");
-
                 var otherCollider = (CollisionObject2D) raycast.GetCollider();
 
                 Inventory targetInventory = (Inventory) otherCollider.GetParent();

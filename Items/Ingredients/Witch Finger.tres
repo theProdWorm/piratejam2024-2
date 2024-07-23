@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="IngredientData" load_steps=3 format=3 uid="uid://bcqhwgqr1rgdj"]
+
+[ext_resource type="Texture2D" uid="uid://5a2isk4iq725" path="res://Textures/Witch Finger.png" id="1_6h1lc"]
+[ext_resource type="Script" path="res://Scripts/Data Classes/IngredientData.cs" id="1_tr5b1"]
+
+[resource]
+script = ExtResource("1_tr5b1")
+PrepMethod = 0
+Name = "Witch Finger"
+Price = 15
+Texture = ExtResource("1_6h1lc")

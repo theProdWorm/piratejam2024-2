@@ -7,5 +7,5 @@
 script = ExtResource("1_8l8xy")
 PrepMethod = 0
 Name = "Squid Ink"
-Price = 10
+Price = 5
 Texture = ExtResource("1_sj68g")

@@ -25,14 +25,14 @@ public partial class ShoppingBag : Inventory {
         return totalValue;
     }
 
-    public bool ConfirmPurchase() {
+    public void ConfirmPurchase() {
         int totalValue = GetTotalValue();
         bool canAfford = playerInventory.balance - totalValue >= 0;
 
         if (!canAfford){
             GD.Print($"Can't afford! Current balance: {playerInventory.balance}\nCost of items: {totalValue}");
 
-            return false;
+            return;
         }
 
         playerInventory.ingredients.AddRange(ingredients);
@@ -40,6 +40,11 @@ public partial class ShoppingBag : Inventory {
 
         GD.Print($"Paid {totalValue} coins. New balance: {playerInventory.balance}");
 
-        return true;
+        Node newScene = ResourceLoader.Load<PackedScene>("Scenes/PreparationScene.tscn").Instantiate();
+
+        var root = GetTree().Root;
+        root.AddChild(newScene);
+
+        root.GetNode("MerchantScene").QueueFree();
     }
 }

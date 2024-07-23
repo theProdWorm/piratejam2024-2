@@ -1,71 +1,77 @@
-[gd_scene load_steps=2 format=3 uid="uid://dfjcn7775io4v"]
+[gd_scene load_steps=3 format=3 uid="uid://dfjcn7775io4v"]
 
-[ext_resource type="Script" path="res://Scripts/Inventory/PlayerInventory.cs" id="1_fygfe"]
+[ext_resource type="Script" path="res://Scripts/Inventory/PlayerInventory.cs" id="1_wi51t"]
+[ext_resource type="Texture2D" uid="uid://dwu1ffacdfl0l" path="res://Textures/Trash/INVENTORY INGREDIENTS.png" id="2_s24oa"]
 
 [node name="PlayerInventory" type="Node2D"]
-script = ExtResource("1_fygfe")
+script = ExtResource("1_wi51t")
+
+[node name="InventoryIngredients" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(512, 384)
+texture = ExtResource("2_s24oa")
 
 [node name="Ingredients" type="Node2D" parent="."]
 
 [node name="1,1" type="Node2D" parent="Ingredients"]
-position = Vector2(124, 544)
+position = Vector2(124, 555)
 
 [node name="1,2" type="Node2D" parent="Ingredients"]
-position = Vector2(250, 544)
+position = Vector2(250, 555)
 
 [node name="1,3" type="Node2D" parent="Ingredients"]
-position = Vector2(378, 544)
+position = Vector2(378, 555)
 
 [node name="1,4" type="Node2D" parent="Ingredients"]
-position = Vector2(505, 544)
+position = Vector2(505, 555)
 
 [node name="1,5" type="Node2D" parent="Ingredients"]
-position = Vector2(631, 544)
+position = Vector2(631, 555)
 
 [node name="1,6" type="Node2D" parent="Ingredients"]
-position = Vector2(757, 544)
+position = Vector2(757, 555)
 
 [node name="1,7" type="Node2D" parent="Ingredients"]
-position = Vector2(884, 544)
+position = Vector2(884, 555)
 
 [node name="2,1" type="Node2D" parent="Ingredients"]
-position = Vector2(124, 624)
+position = Vector2(124, 640)
 
 [node name="2,2" type="Node2D" parent="Ingredients"]
-position = Vector2(250, 624)
+position = Vector2(250, 640)
 
 [node name="2,3" type="Node2D" parent="Ingredients"]
-position = Vector2(378, 624)
+position = Vector2(378, 640)
 
 [node name="2,4" type="Node2D" parent="Ingredients"]
-position = Vector2(505, 624)
+position = Vector2(505, 640)
 
 [node name="2,5" type="Node2D" parent="Ingredients"]
-position = Vector2(631, 624)
+position = Vector2(631, 640)
 
 [node name="2,6" type="Node2D" parent="Ingredients"]
-position = Vector2(757, 624)
+position = Vector2(757, 640)
 
 [node name="2,7" type="Node2D" parent="Ingredients"]
-position = Vector2(884, 624)
+position = Vector2(884, 640)
 
 [node name="3,1" type="Node2D" parent="Ingredients"]
-position = Vector2(124, 702)
+position = Vector2(124, 724)
 
 [node name="3,2" type="Node2D" parent="Ingredients"]
-position = Vector2(250, 702)
+position = Vector2(250, 724)
 
 [node name="3,3" type="Node2D" parent="Ingredients"]
-position = Vector2(378, 702)
+position = Vector2(378, 724)
 
 [node name="3,4" type="Node2D" parent="Ingredients"]
-position = Vector2(505, 702)
+position = Vector2(505, 724)
 
 [node name="3,5" type="Node2D" parent="Ingredients"]
-position = Vector2(631, 702)
+position = Vector2(631, 724)
 
 [node name="3,6" type="Node2D" parent="Ingredients"]
-position = Vector2(757, 702)
+position = Vector2(757, 724)
 
 [node name="3,7" type="Node2D" parent="Ingredients"]
-position = Vector2(884, 702)
+position = Vector2(884, 724)

@@ -27,7 +27,7 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerInventory="*res://Prefabs/PlayerInventory.tscn"
+PlayerInventory="*res://Prefabs/Inventory/PlayerInventory.tscn"
 
 [debug]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c8an8lbhymkg2"]
 
 [ext_resource type="Script" path="res://Scripts/Scene scripts/PreparationScene.cs" id="1_r5qbm"]
-[ext_resource type="Texture2D" uid="uid://cyxayow0behnw" path="res://Textures/Preparation_Table.png" id="2_2pehx"]
+[ext_resource type="Texture2D" uid="uid://dwu1ffacdfl0l" path="res://Textures/Trash/INVENTORY INGREDIENTS.png" id="2_gajit"]
 [ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Textures/Preparation_Cutting.png" id="3_ltn2y"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6h5d"]
@@ -18,23 +18,15 @@
 script = ExtResource("1_r5qbm")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
 
-[node name="Background(Change to TextureRect later)" type="ColorRect" parent="CanvasLayer"]
+[node name="Background(Change to TextureRect later)" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.216239, 0.297507, 0.455474, 1)
-
-[node name="Table" type="TextureRect" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_2pehx")
-expand_mode = 1
+texture = ExtResource("2_gajit")
 
 [node name="Cutting" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = -1
@@ -42,10 +34,10 @@ anchor_left = 0.054
 anchor_top = 0.671
 anchor_right = 0.269
 anchor_bottom = 0.855
-offset_left = -0.208
-offset_top = 0.191986
-offset_right = 0.111969
-offset_bottom = -0.0400391
+offset_left = 516.704
+offset_top = -158.328
+offset_right = 517.024
+offset_bottom = -158.56
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_ltn2y")
