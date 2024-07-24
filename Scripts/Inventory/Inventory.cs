@@ -1,55 +1,38 @@
 using Godot;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 
 [GlobalClass]
 public abstract partial class Inventory : Node2D {
-    private IngredientData[] ingredientCodex;
+    public static Dictionary<string, IngredientData> ingredientCodex;
     public List<IngredientData> ingredients;
 
     public override void _Ready () {
         string[] ingredientPaths = Directory.GetFiles("Items/Ingredients");
 
-        ingredientCodex = new IngredientData[ingredientPaths.Length];
+        ingredientCodex = new();
 
-        for (int i = 0; i < ingredientPaths.Length; i++) {
-            var ingredient = ResourceLoader.Load<IngredientData>(ingredientPaths[i]);
-            ingredientCodex[i] = ingredient;
+        foreach(var path in ingredientPaths) {
+            var ingredient = ResourceLoader.Load<IngredientData>(path);
+
+            ingredientCodex.Add(ingredient.Name, ingredient);
         }
     }
 
-    #region Random item generation
     public IngredientData GetRandomItem () {
-        int index = GD.RandRange(0, ingredientCodex.Length - 1);
-
-        Quality quality = GetRandomQuality();
+        int index = GD.RandRange(0, ingredientCodex.Values.Count - 1);
 
         float haggleValue = 0; // TODO: change when HaggleValue is relevant
 
-        IngredientData item = new(ingredientCodex[index]) {
-            ItemQuality = quality,
+        IngredientData item = new(ingredientCodex.Values.ToArray()[index]) {
             HaggleValue = haggleValue
         };
 
+        item.RandomizeQuality();
+
         return item;
     }
-
-    public Quality GetRandomQuality () {
-        Quality quality = Quality.Normal;
-
-        if (GD.RandRange(0, 2) == 0) {
-            quality = Quality.Good;
-            if (GD.RandRange(0, 2) == 0) {
-                quality = Quality.Great;
-                if (GD.RandRange(0, 2) == 0) {
-                    quality = Quality.Exquisite;
-                }
-            }
-        }
-
-        return quality;
-    }
-    #endregion
 
     #region UI
     /// <summary>
@@ -58,7 +41,7 @@ public abstract partial class Inventory : Node2D {
     /// the children of which are positional nodes for easy editing.<br></br>
     /// Item nodes are then childed to the positional nodes.
     /// </summary>
-    public void CreateIngredientUI () {
+    public virtual void CreateIngredientUI () {
         Node2D ui = (Node2D) GetNode("Ingredients");
 
         // Create ingredient nodes.
@@ -94,6 +77,19 @@ public abstract partial class Inventory : Node2D {
     public virtual void UpdateUI() {
         DestroyUI();
         CreateIngredientUI();
+    }
+
+    protected void DisplayPrices () {
+        var ui = (Node2D) GetNode("Ingredients");
+
+        foreach (var node in ui.GetChildren().Cast<Node2D>()) {
+            if (node.GetChildCount() == 0)
+                continue;
+
+            var priceTag = node.GetChild(0).GetNode<RichTextLabel>("Price tag");
+
+            priceTag.Visible = true;
+        }
     }
     #endregion
 

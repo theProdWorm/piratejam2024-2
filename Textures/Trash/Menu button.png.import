@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdc0k4exxtqbh"
-path="res://.godot/imported/Squid Ink.png-35cf79cad513e6921b7df7d243713241.ctex"
+uid="uid://bcrjtqkb01ljn"
+path="res://.godot/imported/Menu button.png-8c33f921dff1530617f90b373c75994c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Squid Ink.png"
-dest_files=["res://.godot/imported/Squid Ink.png-35cf79cad513e6921b7df7d243713241.ctex"]
+source_file="res://Textures/Trash/Menu button.png"
+dest_files=["res://.godot/imported/Menu button.png-8c33f921dff1530617f90b373c75994c.ctex"]
 
 [params]
 

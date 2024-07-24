@@ -7,11 +7,37 @@ public partial class PlayerInventory : Inventory {
     public int balance = 100;
     public IngredientData shopRequest;
 
+    public RichTextLabel balanceLabel;
 
+    private bool invIsPotions = false;
 
     public override void _Ready () {
         potions = new(16);
         ingredients = new(21);
+
+        balanceLabel = (RichTextLabel) GetNode("/root/Overlay/Balance background/Balance");
+
+        UpdateBalanceLabel();
+    }
+
+    public void CreatePotionOfVirility() {
+        List<IngredientData> ings = new() {
+            new(ingredientCodex["Mermaid Tears"]),
+            new(ingredientCodex["Mermaid Tears"]),
+            new(ingredientCodex["Octopus Ink"]),
+            new(ingredientCodex["Witch Finger"])
+        };
+
+        foreach(var ing in ings) {
+            ing.RandomizeQuality();
+        }
+
+        bool success = BrewHandler.TryBrew(ings, out PotionData resultPotion);
+
+        if (success) {
+            GD.Print("Brew success!");
+            resultPotion.Print();
+        }
     }
 
     protected void CreatePotionUI () {
@@ -37,5 +63,13 @@ public partial class PlayerInventory : Inventory {
     public override void UpdateUI () {
         DestroyUI();
 
+        if(invIsPotions)
+            CreatePotionUI();
+        else
+            CreateIngredientUI();
+    }
+
+    public void UpdateBalanceLabel() {
+        balanceLabel.Text = $"[right]{balance}G";
     }
 }

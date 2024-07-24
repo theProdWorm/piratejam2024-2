@@ -1,6 +1,14 @@
 {
   "hidden_columns": {
+    "res://Items/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
     "res://Items/Ingredients/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
+    },
+    "res://Items/Potions/": {
       "resource_local_to_scene": true,
       "resource_name": true
     },
@@ -11,11 +19,18 @@
     "res://Resources/Items/": {
       "resource_local_to_scene": true,
       "resource_name": true
+    },
+    "res://Textures/Fonts/": {
+      "resource_local_to_scene": true,
+      "resource_name": true
     }
   },
   "recent_paths": [
+    "res://.godot",
+    "res://Textures/Fonts/",
+    "res://Items/Potions/",
     "res://Items/Ingredients/",
-    "res://.godot"
+    "res://Items/"
   ],
   "table_functions": {
     "filter": [

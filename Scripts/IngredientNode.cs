@@ -21,6 +21,10 @@ public partial class IngredientNode : ItemNode {
             qualityNodes[i].Visible = true;
         }
 
+        var priceTag = (RichTextLabel) GetNode("Price tag");
+
+        priceTag.Text = $"[center]{data.GetRealPrice()}G";
+
         Texture = data.Texture;
 
         ItemDropped = () => {

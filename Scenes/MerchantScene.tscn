@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://m4c7uwwo5npk"]
+[gd_scene load_steps=8 format=3 uid="uid://m4c7uwwo5npk"]
 
+[ext_resource type="Texture2D" uid="uid://bit60l0ed7c2g" path="res://Textures/Trash/Merchant.png" id="1_8gudg"]
 [ext_resource type="PackedScene" uid="uid://dcxfexwphf8xb" path="res://Prefabs/Inventory/MerchantInventory.tscn" id="1_v52o5"]
 [ext_resource type="PackedScene" uid="uid://gbsb1rqlb0rf" path="res://Prefabs/Inventory/ShoppingBag.tscn" id="2_nihnv"]
 [ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp-Book.ttf" id="3_ybfu4"]
@@ -7,28 +8,30 @@
 [ext_resource type="FontFile" uid="uid://bp75jtoyia0wy" path="res://Textures/Fonts/MedievalSharp-BookOblique.ttf" id="5_wlgvn"]
 [ext_resource type="FontFile" uid="uid://cu0mc027hy3q" path="res://Textures/Fonts/MedievalSharp-BoldOblique.ttf" id="6_vp0hu"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iydsl"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0q62c"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iul0h"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5r0mt"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_si3e6"]
-
 [node name="MerchantScene" type="Node2D"]
+
+[node name="Merchant" type="Sprite2D" parent="."]
+position = Vector2(514, 409)
+texture = ExtResource("1_8gudg")
 
 [node name="MerchantInventory" parent="." instance=ExtResource("1_v52o5")]
 
 [node name="ShoppingBag" parent="." instance=ExtResource("2_nihnv")]
 
-[node name="Balance" type="RichTextLabel" parent="."]
-offset_left = 22.0
-offset_top = 47.0
-offset_right = 127.0
-offset_bottom = 75.0
-tooltip_text = "Your current balance"
+[node name="Purchase button" type="TextureButton" parent="."]
+offset_left = 526.0
+offset_top = 701.0
+offset_right = 903.0
+offset_bottom = 745.0
+
+[node name="Purchase label" type="RichTextLabel" parent="Purchase button"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 366.0
+offset_bottom = 40.0
+tooltip_text = "Purchase all items in the bag and return to the workshop"
+mouse_filter = 1
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_ybfu4")
 theme_override_fonts/bold_font = ExtResource("4_iq3fn")
@@ -39,23 +42,6 @@ theme_override_font_sizes/bold_font_size = 26
 theme_override_font_sizes/italics_font_size = 26
 theme_override_font_sizes/bold_italics_font_size = 26
 bbcode_enabled = true
-text = "[right]340G"
+text = "[center]Pay and start the day!"
 
-[node name="Button" type="Button" parent="."]
-offset_left = 526.0
-offset_top = 701.0
-offset_right = 903.0
-offset_bottom = 745.0
-theme_override_colors/icon_normal_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_focus_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(0, 0, 0, 1)
-theme_override_styles/normal = SubResource("StyleBoxEmpty_iydsl")
-theme_override_styles/hover = SubResource("StyleBoxEmpty_0q62c")
-theme_override_styles/pressed = SubResource("StyleBoxEmpty_iul0h")
-theme_override_styles/disabled = SubResource("StyleBoxEmpty_5r0mt")
-theme_override_styles/focus = SubResource("StyleBoxEmpty_si3e6")
-
-[connection signal="pressed" from="Button" to="ShoppingBag" method="ConfirmPurchase"]
+[connection signal="pressed" from="Purchase button" to="ShoppingBag" method="ConfirmPurchase"]

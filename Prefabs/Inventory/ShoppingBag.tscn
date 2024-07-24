@@ -1,13 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://gbsb1rqlb0rf"]
+[gd_scene load_steps=8 format=3 uid="uid://gbsb1rqlb0rf"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/ShoppingBag.cs" id="1_o3r10"]
-[ext_resource type="Texture2D" uid="uid://cogtgpna4nprk" path="res://Textures/Trash/MERCHANT.png" id="2_5iumc"]
+[ext_resource type="Texture2D" uid="uid://bit60l0ed7c2g" path="res://Textures/Trash/Merchant.png" id="2_silfb"]
+[ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp-Book.ttf" id="3_pl61b"]
+[ext_resource type="FontFile" uid="uid://cigsl3xyk3q5n" path="res://Textures/Fonts/MedievalSharp-Bold.ttf" id="4_j0jfb"]
+[ext_resource type="FontFile" uid="uid://bp75jtoyia0wy" path="res://Textures/Fonts/MedievalSharp-BookOblique.ttf" id="5_exnaw"]
+[ext_resource type="FontFile" uid="uid://cu0mc027hy3q" path="res://Textures/Fonts/MedievalSharp-BoldOblique.ttf" id="6_4tfhc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbdcm"]
 size = Vector2(351, 212)
 
 [node name="ShoppingBag" type="Node2D"]
 script = ExtResource("1_o3r10")
+
+[node name="UI" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(513, 407)
+texture = ExtResource("2_silfb")
 
 [node name="Ingredients" type="Node2D" parent="."]
 position = Vector2(200, 620)
@@ -45,13 +54,36 @@ position = Vector2(208, 88)
 position = Vector2(306.5, 638)
 shape = SubResource("RectangleShape2D_nbdcm")
 
-[node name="Merchant" type="Sprite2D" parent="."]
-z_index = -5
-position = Vector2(512, 384)
-texture = ExtResource("2_5iumc")
+[node name="Total value" type="RichTextLabel" parent="."]
+offset_left = 392.0
+offset_top = 509.0
+offset_right = 482.0
+offset_bottom = 536.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_pl61b")
+theme_override_fonts/bold_font = ExtResource("4_j0jfb")
+theme_override_fonts/italics_font = ExtResource("5_exnaw")
+theme_override_fonts/bold_italics_font = ExtResource("6_4tfhc")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 26
+theme_override_font_sizes/italics_font_size = 26
+theme_override_font_sizes/bold_italics_font_size = 26
+bbcode_enabled = true
+text = "[right]0G"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = 513.0
-offset_top = 583.0
-offset_right = 640.0
-offset_bottom = 627.0
+[node name="Total value label" type="RichTextLabel" parent="."]
+offset_left = 301.0
+offset_top = 509.0
+offset_right = 411.0
+offset_bottom = 536.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("3_pl61b")
+theme_override_fonts/bold_font = ExtResource("4_j0jfb")
+theme_override_fonts/italics_font = ExtResource("5_exnaw")
+theme_override_fonts/bold_italics_font = ExtResource("6_4tfhc")
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 26
+theme_override_font_sizes/italics_font_size = 26
+theme_override_font_sizes/bold_italics_font_size = 26
+bbcode_enabled = true
+text = "Total value:"

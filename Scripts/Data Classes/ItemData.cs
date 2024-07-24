@@ -19,10 +19,21 @@ public abstract partial class ItemData : Resource
         if(ItemQuality == Quality.Normal)
             return Price;
 
-        float qualityMod = 1 + (float) ItemQuality / 5f;
+        double qualityMod = 1 + (double) ItemQuality / 5f;
 
-        int realPrice = (int) Mathf.Round(Price * qualityMod);
-
+        int realPrice = Mathf.RoundToInt(Price * qualityMod);
         return realPrice;
+    }
+
+    public void RandomizeQuality () {
+        if (GD.RandRange(0, 2) == 0) {
+            ItemQuality = Quality.Good;
+            if (GD.RandRange(0, 2) == 0) {
+                ItemQuality = Quality.Great;
+                if (GD.RandRange(0, 2) == 0) {
+                    ItemQuality = Quality.Exquisite;
+                }
+            }
+        }
     }
 }
