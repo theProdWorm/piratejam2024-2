@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 
 public partial class PlayerInventory : Inventory {
+    [Export] public int startBalance;
+
     public List<PotionData> potions;
 
-    public int balance = 100;
+    public int balance;
     public IngredientData shopRequest;
 
     public RichTextLabel balanceLabel;
@@ -12,6 +14,8 @@ public partial class PlayerInventory : Inventory {
     private bool invIsPotions = false;
 
     public override void _Ready () {
+        balance = startBalance;
+
         potions = new(16);
         ingredients = new(21);
 

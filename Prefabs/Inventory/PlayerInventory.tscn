@@ -5,6 +5,7 @@
 
 [node name="PlayerInventory" type="Node2D"]
 script = ExtResource("1_wi51t")
+startBalance = 100
 
 [node name="Background" type="Sprite2D" parent="."]
 visible = false
