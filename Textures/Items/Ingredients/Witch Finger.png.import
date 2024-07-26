@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdc0k4exxtqbh"
-path="res://.godot/imported/Octopus Ink.png-180ebbd9021f63f6cd242a4d77a2eeb0.ctex"
+uid="uid://hqhqlwvllqmo"
+path="res://.godot/imported/Witch Finger.png-0864c611be877bc75b3c5337966362dc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Octopus Ink.png"
-dest_files=["res://.godot/imported/Octopus Ink.png-180ebbd9021f63f6cd242a4d77a2eeb0.ctex"]
+source_file="res://Textures/Items/Ingredients/Witch Finger.png"
+dest_files=["res://.godot/imported/Witch Finger.png-0864c611be877bc75b3c5337966362dc.ctex"]
 
 [params]
 

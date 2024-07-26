@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6eblcaqgxkqx"]
+
+[ext_resource type="Script" path="res://Scripts/VolumeSlider.cs" id="1_x82rv"]
+[ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp.ttf" id="2_mf6us"]
+
+[node name="Volume Slider" type="VSlider"]
+z_index = 16
+offset_left = 23.0
+offset_top = 360.0
+offset_right = 39.0
+offset_bottom = 666.0
+value = 100.0
+script = ExtResource("1_x82rv")
+busName = "Master"
+
+[node name="Volume label" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = -23.0
+offset_top = 306.0
+offset_right = 52.0
+offset_bottom = 340.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_mf6us")
+theme_override_font_sizes/normal_font_size = 20
+text = "Volume"
+
+[connection signal="value_changed" from="." to="." method="OnValueChanged"]

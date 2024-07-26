@@ -1,12 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://m4c7uwwo5npk"]
+[gd_scene load_steps=6 format=3 uid="uid://m4c7uwwo5npk"]
 
 [ext_resource type="Texture2D" uid="uid://bit60l0ed7c2g" path="res://Textures/Trash/Merchant.png" id="1_8gudg"]
 [ext_resource type="PackedScene" uid="uid://dcxfexwphf8xb" path="res://Prefabs/Inventory/MerchantInventory.tscn" id="1_v52o5"]
 [ext_resource type="PackedScene" uid="uid://gbsb1rqlb0rf" path="res://Prefabs/Inventory/ShoppingBag.tscn" id="2_nihnv"]
-[ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp-Book.ttf" id="3_ybfu4"]
-[ext_resource type="FontFile" uid="uid://cigsl3xyk3q5n" path="res://Textures/Fonts/MedievalSharp-Bold.ttf" id="4_iq3fn"]
-[ext_resource type="FontFile" uid="uid://bp75jtoyia0wy" path="res://Textures/Fonts/MedievalSharp-BookOblique.ttf" id="5_wlgvn"]
-[ext_resource type="FontFile" uid="uid://cu0mc027hy3q" path="res://Textures/Fonts/MedievalSharp-BoldOblique.ttf" id="6_vp0hu"]
+[ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp.ttf" id="3_ybfu4"]
+[ext_resource type="AudioStream" uid="uid://cmvjbc0xl5jjr" path="res://Sounds/Music/Base.mp3" id="8_aubtk"]
 
 [node name="MerchantScene" type="Node2D"]
 
@@ -34,14 +32,13 @@ tooltip_text = "Purchase all items in the bag and return to the workshop"
 mouse_filter = 1
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_ybfu4")
-theme_override_fonts/bold_font = ExtResource("4_iq3fn")
-theme_override_fonts/italics_font = ExtResource("5_wlgvn")
-theme_override_fonts/bold_italics_font = ExtResource("6_vp0hu")
 theme_override_font_sizes/normal_font_size = 20
-theme_override_font_sizes/bold_font_size = 26
-theme_override_font_sizes/italics_font_size = 26
-theme_override_font_sizes/bold_italics_font_size = 26
 bbcode_enabled = true
 text = "[center]Pay and start the day!"
+
+[node name="Music player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_aubtk")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Purchase button" to="ShoppingBag" method="ConfirmPurchase"]

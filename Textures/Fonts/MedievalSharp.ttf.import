@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://cigsl3xyk3q5n"
-path="res://.godot/imported/MedievalSharp-Bold.ttf-dde776480ed3d3713e19c8b89a60445b.fontdata"
+uid="uid://buja4ifjv0p8g"
+path="res://.godot/imported/MedievalSharp.ttf-9c0388d138781b11895a57bb3d000138.fontdata"
 
 [deps]
 
-source_file="res://Textures/Fonts/MedievalSharp-Bold.ttf"
-dest_files=["res://.godot/imported/MedievalSharp-Bold.ttf-dde776480ed3d3713e19c8b89a60445b.fontdata"]
+source_file="res://Textures/Fonts/MedievalSharp.ttf"
+dest_files=["res://.godot/imported/MedievalSharp.ttf-9c0388d138781b11895a57bb3d000138.fontdata"]
 
 [params]
 

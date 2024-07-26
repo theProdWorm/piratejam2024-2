@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://Scripts/Data Classes/PotionData.cs" id="1_jsdlr"]
 [ext_resource type="Resource" uid="uid://gv3ar0u6u0oj" path="res://Items/Ingredients/Octopus Ink.tres" id="2_oejjc"]
 [ext_resource type="Resource" uid="uid://bcqhwgqr1rgdj" path="res://Items/Ingredients/Witch Finger.tres" id="3_i4b35"]
-[ext_resource type="Texture2D" uid="uid://cdc0k4exxtqbh" path="res://Textures/Octopus Ink.png" id="4_c4ay1"]
+[ext_resource type="Texture2D" uid="uid://cdc0k4exxtqbh" path="res://Textures/Items/Ingredients/Octopus Ink.png" id="4_c4ay1"]
 
 [resource]
 script = ExtResource("1_jsdlr")

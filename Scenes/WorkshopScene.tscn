@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c8an8lbhymkg2"]
+[gd_scene load_steps=10 format=3 uid="uid://c8an8lbhymkg2"]
 
-[ext_resource type="Script" path="res://Scripts/Scene scripts/PreparationScene.cs" id="1_r5qbm"]
-[ext_resource type="Texture2D" uid="uid://dwu1ffacdfl0l" path="res://Textures/Trash/INVENTORY INGREDIENTS.png" id="2_gajit"]
-[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Textures/Preparation_Cutting.png" id="3_ltn2y"]
+[ext_resource type="Script" path="res://Scripts/Scene scripts/PreparationScene.cs" id="1_rg77g"]
+[ext_resource type="Texture2D" uid="uid://dwu1ffacdfl0l" path="res://Textures/Trash/INVENTORY INGREDIENTS.png" id="2_tli6m"]
+[ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Textures/Preparation_Cutting.png" id="3_ya5oe"]
+[ext_resource type="AudioStream" uid="uid://cmvjbc0xl5jjr" path="res://Sounds/Music/Base.mp3" id="4_ghb2q"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p6h5d"]
 
@@ -14,8 +15,8 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yfpi5"]
 
-[node name="Preparation" type="Node2D"]
-script = ExtResource("1_r5qbm")
+[node name="Workshop" type="Node2D"]
+script = ExtResource("1_rg77g")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -1
@@ -26,9 +27,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_gajit")
+texture = ExtResource("2_tli6m")
 
 [node name="Cutting" type="TextureRect" parent="CanvasLayer"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.054
 anchor_top = 0.671
@@ -40,7 +42,7 @@ offset_right = 517.024
 offset_bottom = -158.56
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_ltn2y")
+texture = ExtResource("3_ya5oe")
 expand_mode = 1
 
 [node name="Button" type="Button" parent="CanvasLayer/Cutting"]
@@ -59,5 +61,10 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_6qup2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_gquwl")
 theme_override_styles/disabled = SubResource("StyleBoxEmpty_k3qnk")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_yfpi5")
+
+[node name="Music player" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ghb2q")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="CanvasLayer/Cutting/Button" to="." method="CuttingClicked"]

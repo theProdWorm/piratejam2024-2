@@ -1,9 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dfjcn7775io4v"]
+[gd_scene load_steps=3 format=3 uid="uid://dfjcn7775io4v"]
 
 [ext_resource type="Script" path="res://Scripts/Inventory/PlayerInventory.cs" id="1_wi51t"]
 [ext_resource type="Texture2D" uid="uid://dwu1ffacdfl0l" path="res://Textures/Trash/INVENTORY INGREDIENTS.png" id="2_s24oa"]
-[ext_resource type="Texture2D" uid="uid://bcrjtqkb01ljn" path="res://Textures/Trash/Menu button.png" id="3_y1pst"]
-[ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp-Book.ttf" id="4_s46v1"]
 
 [node name="PlayerInventory" type="Node2D"]
 script = ExtResource("1_wi51t")
@@ -78,24 +76,3 @@ position = Vector2(757, 724)
 
 [node name="3,7" type="Node2D" parent="Ingredients"]
 position = Vector2(884, 724)
-
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 453.0
-offset_top = 284.0
-offset_right = 557.0
-offset_bottom = 324.0
-texture_normal = ExtResource("3_y1pst")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="TextureButton"]
-layout_mode = 0
-offset_left = 1.0
-offset_top = 9.0
-offset_right = 104.0
-offset_bottom = 49.0
-mouse_filter = 2
-theme_override_colors/default_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("4_s46v1")
-bbcode_enabled = true
-text = "[center]Craft"
-
-[connection signal="pressed" from="TextureButton" to="." method="CreatePotionOfVirility"]

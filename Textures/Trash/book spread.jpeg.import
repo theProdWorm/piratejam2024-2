@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qlapnll3lvb5"
-path="res://.godot/imported/Mermaid Tears.png-519dde0f0e15efc33ae13927cdb25cf7.ctex"
+uid="uid://o5y7to4rmtk5"
+path="res://.godot/imported/book spread.jpeg-613de7ff8986467c15b53ba0d295585f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Mermaid Tears.png"
-dest_files=["res://.godot/imported/Mermaid Tears.png-519dde0f0e15efc33ae13927cdb25cf7.ctex"]
+source_file="res://Textures/Trash/book spread.jpeg"
+dest_files=["res://.godot/imported/book spread.jpeg-613de7ff8986467c15b53ba0d295585f.ctex"]
 
 [params]
 

@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://do1toklad4c7o"]
+
+[ext_resource type="Script" path="res://Scripts/RecipeBook.cs" id="1_r2wpk"]
+[ext_resource type="Texture2D" uid="uid://o5y7to4rmtk5" path="res://Textures/Trash/book spread.jpeg" id="2_3vw7d"]
+[ext_resource type="FontFile" uid="uid://charc4ibhed6g" path="res://Textures/Fonts/CasualCursive.ttf" id="4_q6exf"]
+
+[node name="RecipeBook" type="Node2D" node_paths=PackedStringArray("leftPage", "rightPage")]
+script = ExtResource("1_r2wpk")
+leftPage = NodePath("Left page")
+rightPage = NodePath("Right page")
+
+[node name="BookSpread" type="TextureRect" parent="."]
+z_index = 2
+offset_left = 128.0
+offset_top = 150.0
+offset_right = 896.0
+offset_bottom = 674.0
+mouse_filter = 0
+texture = ExtResource("2_3vw7d")
+
+[node name="Left page" type="Node2D" parent="."]
+z_index = 5
+
+[node name="Potion" type="Sprite2D" parent="Left page"]
+position = Vector2(348, 284)
+scale = Vector2(1.2, 1.2)
+
+[node name="Name label" type="RichTextLabel" parent="Left page/Potion"]
+offset_left = -102.0
+offset_top = 32.0
+offset_right = 347.0
+offset_bottom = 77.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_q6exf")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+
+[node name="Ing1" type="Sprite2D" parent="Left page"]
+position = Vector2(288, 392)
+
+[node name="Ing2" type="Sprite2D" parent="Left page"]
+position = Vector2(400, 392)
+
+[node name="Ing3" type="Sprite2D" parent="Left page"]
+position = Vector2(288, 496)
+
+[node name="Ing4" type="Sprite2D" parent="Left page"]
+position = Vector2(400, 496)
+
+[node name="Right page" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(325, 0)
+
+[node name="Potion" type="Sprite2D" parent="Right page"]
+position = Vector2(348, 284)
+scale = Vector2(1.2, 1.2)
+
+[node name="Name label" type="RichTextLabel" parent="Right page/Potion"]
+offset_left = -116.0
+offset_top = 32.0
+offset_right = 326.0
+offset_bottom = 77.0
+scale = Vector2(0.5, 0.5)
+mouse_filter = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("4_q6exf")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+
+[node name="Ing1" type="Sprite2D" parent="Right page"]
+position = Vector2(288, 392)
+
+[node name="Ing2" type="Sprite2D" parent="Right page"]
+position = Vector2(400, 392)
+
+[node name="Ing3" type="Sprite2D" parent="Right page"]
+position = Vector2(288, 496)
+
+[node name="Ing4" type="Sprite2D" parent="Right page"]
+position = Vector2(400, 496)

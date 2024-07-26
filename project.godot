@@ -21,14 +21,13 @@ resources_spreadsheet_view/context_menu_on_leftclick=false
 [application]
 
 config/name="Piratejam2024-2"
-run/main_scene="res://Scenes/MerchantScene.tscn"
+run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.2", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Overlay="*res://Scenes/Overlay.tscn"
-PlayerInventory="*res://Prefabs/Inventory/PlayerInventory.tscn"
+VolumeSlider="*res://Scenes/VolumeSlider.tscn"
 BrewHandler="*res://Prefabs/BrewHandler.tscn"
 
 [debug]
@@ -39,6 +38,7 @@ settings/stdout/verbose_stdout=true
 
 window/size/viewport_width=1024
 window/size/viewport_height=768
+window/size/resizable=false
 
 [dotnet]
 

@@ -1,88 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|g:\\emil\\documents\\github\\piratejam2024-2\\scripts\\inventory\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|solutionrelative:scripts\\inventory\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|g:\\emil\\documents\\github\\piratejam2024-2\\scripts\\ingredientnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|solutionrelative:scripts\\ingredientnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|g:\\emil\\documents\\github\\piratejam2024-2\\scripts\\itemnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|solutionrelative:scripts\\itemnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|g:\\emil\\documents\\github\\piratejam2024-2\\scripts\\potionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9FA190DF-7F29-4A3E-A57A-0A6863A11C2D}|Piratejam2024-2.csproj|solutionrelative:scripts\\potionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Inventory.cs",
-              "DocumentMoniker": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\Inventory\\Inventory.cs",
-              "RelativeDocumentMoniker": "Scripts\\Inventory\\Inventory.cs",
-              "ToolTip": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\Inventory\\Inventory.cs",
-              "RelativeToolTip": "Scripts\\Inventory\\Inventory.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T16:11:41.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "PotionNode.cs",
-              "DocumentMoniker": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\PotionNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\PotionNode.cs",
-              "ToolTip": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\PotionNode.cs",
-              "RelativeToolTip": "Scripts\\PotionNode.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T15:53:51.061Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IngredientNode.cs",
-              "DocumentMoniker": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\IngredientNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\IngredientNode.cs",
-              "ToolTip": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\IngredientNode.cs",
-              "RelativeToolTip": "Scripts\\IngredientNode.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T15:53:50.319Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ItemNode.cs",
-              "DocumentMoniker": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\ItemNode.cs",
-              "RelativeDocumentMoniker": "Scripts\\ItemNode.cs",
-              "ToolTip": "G:\\Emil\\Documents\\GitHub\\piratejam2024-2\\Scripts\\ItemNode.cs",
-              "RelativeToolTip": "Scripts\\ItemNode.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-23T12:43:45.933Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }

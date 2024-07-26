@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bl4j4umgsmeut"
+path="res://.godot/imported/Alchemist's deception main theme.mp3-466593d24dc9136d10f313171cc57380.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Music/Alchemist's deception main theme.mp3"
+dest_files=["res://.godot/imported/Alchemist's deception main theme.mp3-466593d24dc9136d10f313171cc57380.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

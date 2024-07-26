@@ -1,14 +1,10 @@
 using Godot;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
 public partial class BrewHandler : Node {
-    //TODO:
-    //-return correct potion based on input formula
-
-    private static List<PotionData> potionCodex;
+    public static List<PotionData> potionCodex;
 
     public override void _Ready () {
         potionCodex = new();

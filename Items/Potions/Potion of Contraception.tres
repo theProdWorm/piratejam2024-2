@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PotionData" load_steps=6 format=3 uid="uid://cdkb5gmqdyx5t"]
+
+[ext_resource type="Script" path="res://Scripts/Data Classes/PotionData.cs" id="1_21t5y"]
+[ext_resource type="Resource" uid="uid://co46l78p047yx" path="res://Items/Ingredients/Mermaid Tears.tres" id="1_orgxv"]
+[ext_resource type="Resource" uid="uid://gpd1d7vh178v" path="res://Items/Ingredients/Dragon Egg.tres" id="2_5mllx"]
+[ext_resource type="Resource" uid="uid://b0s3ybwh5tpxo" path="res://Items/Ingredients/Rat.tres" id="3_ocedl"]
+[ext_resource type="Texture2D" uid="uid://qlapnll3lvb5" path="res://Textures/Items/Ingredients/Mermaid Tears.png" id="4_ujqyw"]
+
+[resource]
+script = ExtResource("1_21t5y")
+Formula = Array[Object]([ExtResource("1_orgxv"), ExtResource("2_5mllx"), ExtResource("3_ocedl")])
+Name = "Potion of Contraception"
+Price = 0
+Texture = ExtResource("4_ujqyw")

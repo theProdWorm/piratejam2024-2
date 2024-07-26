@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://buja4ifjv0p8g"
-path="res://.godot/imported/MedievalSharp-Book.ttf-4fd52a2a5e194df8318387c3ae164f61.fontdata"
+uid="uid://bwfctrf71ps4u"
+path="res://.godot/imported/Handwrittening.ttf-803b65cf43c426a8008e08d34160f2bc.fontdata"
 
 [deps]
 
-source_file="res://Textures/Fonts/MedievalSharp-Book.ttf"
-dest_files=["res://.godot/imported/MedievalSharp-Book.ttf-4fd52a2a5e194df8318387c3ae164f61.fontdata"]
+source_file="res://Textures/Fonts/Handwrittening.ttf"
+dest_files=["res://.godot/imported/Handwrittening.ttf-803b65cf43c426a8008e08d34160f2bc.fontdata"]
 
 [params]
 

@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bp75jtoyia0wy"
-path="res://.godot/imported/MedievalSharp-BookOblique.ttf-fd94ee527381fd74f1e7648ec27fce83.fontdata"
+uid="uid://ctwvsw7tov82a"
+path="res://.godot/imported/HANDM___.TTF-cf2cf6c956e75c75eb830695af48cf37.fontdata"
 
 [deps]
 
-source_file="res://Textures/Fonts/MedievalSharp-BookOblique.ttf"
-dest_files=["res://.godot/imported/MedievalSharp-BookOblique.ttf-fd94ee527381fd74f1e7648ec27fce83.fontdata"]
+source_file="res://Textures/Fonts/HANDM___.TTF"
+dest_files=["res://.godot/imported/HANDM___.TTF-cf2cf6c956e75c75eb830695af48cf37.fontdata"]
 
 [params]
 

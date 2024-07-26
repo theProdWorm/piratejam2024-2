@@ -58,7 +58,7 @@ public partial class ShoppingBag : Inventory {
         playerInventory.balance -= totalValue;
 
         // Load new scene
-        Node newScene = ResourceLoader.Load<PackedScene>("Scenes/PreparationScene.tscn").Instantiate();
+        Node newScene = ResourceLoader.Load<PackedScene>("Scenes/WorkshopScene.tscn").Instantiate();
 
         var root = GetTree().Root;
         root.AddChild(newScene);
