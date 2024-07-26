@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PotionData" load_steps=6 format=3 uid="uid://cyymc8ypwfpll"]
+
+[ext_resource type="Resource" uid="uid://c2xcewt8q6xee" path="res://Items/Ingredients/Dragon Scales.tres" id="1_2xmxc"]
+[ext_resource type="Script" path="res://Scripts/Data Classes/PotionData.cs" id="1_rglyo"]
+[ext_resource type="Resource" uid="uid://gv3ar0u6u0oj" path="res://Items/Ingredients/Octopus Ink.tres" id="2_vjf24"]
+[ext_resource type="Resource" uid="uid://b0s3ybwh5tpxo" path="res://Items/Ingredients/Rat.tres" id="3_h46y6"]
+[ext_resource type="Texture2D" uid="uid://cdc0k4exxtqbh" path="res://Textures/Items/Ingredients/Octopus Ink.png" id="4_x22r3"]
+
+[resource]
+script = ExtResource("1_rglyo")
+Formula = Array[Object]([ExtResource("1_2xmxc"), ExtResource("2_vjf24"), ExtResource("3_h46y6")])
+Name = "Potion of Charisma"
+Price = 45
+Texture = ExtResource("4_x22r3")

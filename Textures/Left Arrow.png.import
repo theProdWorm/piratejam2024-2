@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://o5y7to4rmtk5"
-path="res://.godot/imported/book spread.jpeg-613de7ff8986467c15b53ba0d295585f.ctex"
+uid="uid://c0p22nbbrgj3n"
+path="res://.godot/imported/Left Arrow.png-7bbfd4919d68268d7d49a611a5dce4dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Trash/book spread.jpeg"
-dest_files=["res://.godot/imported/book spread.jpeg-613de7ff8986467c15b53ba0d295585f.ctex"]
+source_file="res://Textures/Left Arrow.png"
+dest_files=["res://.godot/imported/Left Arrow.png-7bbfd4919d68268d7d49a611a5dce4dd.ctex"]
 
 [params]
 

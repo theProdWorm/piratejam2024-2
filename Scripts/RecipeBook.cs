@@ -1,5 +1,6 @@
 using Godot;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class RecipeBook : Node2D {
     [Export] public Node2D leftPage;
@@ -36,7 +37,8 @@ public partial class RecipeBook : Node2D {
 
 
         // Right page
-        if (BrewHandler.potionCodex.Count % 2 != 0)
+        if (currentPage == pageCount - 1 &&
+            BrewHandler.potionCodex.Count % 2 != 0)
             return;
 
         List<Sprite2D> rNodes = new();
@@ -60,13 +62,40 @@ public partial class RecipeBook : Node2D {
         }
     }
 
+    public void DestroyUI() {
+        foreach (var node in leftPage.GetChildren().Cast<Sprite2D>()) {
+            if(node.Name == "Potion") {
+                node.GetChild<RichTextLabel>(0).Text = string.Empty;
+            }
+
+            node.Texture = null;
+        }
+
+        foreach (var node in rightPage.GetChildren().Cast<Sprite2D>()) {
+            if (node.Name == "Potion") {
+                node.GetChild<RichTextLabel>(0).Text = string.Empty;
+            }
+
+            node.Texture = null;
+        }
+    }
+
+    public void UpdateUI() {
+        DestroyUI();
+        CreateUI();
+    }
+
     public void NextPage() {
         if (currentPage < pageCount - 1)
             currentPage++;
+
+        UpdateUI();
     }
 
     public void PrevPage () {
         if(currentPage > 0)
             currentPage--;
+
+        UpdateUI();
     }
 }

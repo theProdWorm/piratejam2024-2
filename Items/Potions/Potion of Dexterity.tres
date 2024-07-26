@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PotionData" load_steps=6 format=3 uid="uid://ctn13w6f6dmj8"]
+
+[ext_resource type="Resource" uid="uid://b0s3ybwh5tpxo" path="res://Items/Ingredients/Rat.tres" id="1_k1s36"]
+[ext_resource type="Resource" uid="uid://bcqhwgqr1rgdj" path="res://Items/Ingredients/Witch Finger.tres" id="2_qlnln"]
+[ext_resource type="Resource" uid="uid://gpd1d7vh178v" path="res://Items/Ingredients/Dragon Egg.tres" id="3_fbj72"]
+[ext_resource type="Texture2D" uid="uid://cdc0k4exxtqbh" path="res://Textures/Items/Ingredients/Octopus Ink.png" id="4_037hu"]
+[ext_resource type="Script" path="res://Scripts/Data Classes/PotionData.cs" id="5_4gco5"]
+
+[resource]
+script = ExtResource("5_4gco5")
+Formula = Array[Object]([ExtResource("1_k1s36"), ExtResource("1_k1s36"), ExtResource("2_qlnln"), ExtResource("3_fbj72")])
+Name = "Potion of Dexterity"
+Price = 75
+Texture = ExtResource("4_037hu")

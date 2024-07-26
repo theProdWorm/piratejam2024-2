@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="PotionData" load_steps=5 format=3 uid="uid://cdkb5gmqdyx5t"]
+
+[ext_resource type="Resource" uid="uid://c2xcewt8q6xee" path="res://Items/Ingredients/Dragon Scales.tres" id="1_1blvs"]
+[ext_resource type="Resource" uid="uid://bcqhwgqr1rgdj" path="res://Items/Ingredients/Witch Finger.tres" id="2_82fbb"]
+[ext_resource type="Texture2D" uid="uid://cdc0k4exxtqbh" path="res://Textures/Items/Ingredients/Octopus Ink.png" id="3_3bgcu"]
+[ext_resource type="Script" path="res://Scripts/Data Classes/PotionData.cs" id="4_v1t4i"]
+
+[resource]
+script = ExtResource("4_v1t4i")
+Formula = Array[Object]([ExtResource("1_1blvs"), ExtResource("1_1blvs"), ExtResource("2_82fbb")])
+Name = "Potion of Strength"
+Price = 75
+Texture = ExtResource("3_3bgcu")

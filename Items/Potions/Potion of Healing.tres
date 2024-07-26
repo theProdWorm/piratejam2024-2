@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PotionData" load_steps=6 format=3 uid="uid://by2ir1wyx574c"]
+
+[ext_resource type="Resource" uid="uid://gpd1d7vh178v" path="res://Items/Ingredients/Dragon Egg.tres" id="1_xvty7"]
+[ext_resource type="Resource" uid="uid://co46l78p047yx" path="res://Items/Ingredients/Mermaid Tears.tres" id="2_7kmal"]
+[ext_resource type="Resource" uid="uid://b0s3ybwh5tpxo" path="res://Items/Ingredients/Rat.tres" id="3_uys8k"]
+[ext_resource type="Texture2D" uid="uid://cdc0k4exxtqbh" path="res://Textures/Items/Ingredients/Octopus Ink.png" id="4_g7j77"]
+[ext_resource type="Script" path="res://Scripts/Data Classes/PotionData.cs" id="5_d0sd7"]
+
+[resource]
+script = ExtResource("5_d0sd7")
+Formula = Array[Object]([ExtResource("1_xvty7"), ExtResource("2_7kmal"), ExtResource("3_uys8k")])
+Name = "Potion of Healing"
+Price = 75
+Texture = ExtResource("4_g7j77")

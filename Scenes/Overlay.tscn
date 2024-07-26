@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://fvnbbxtjoj6" path="res://Textures/Trash/Overlay.png" id="1_orfyj"]
 [ext_resource type="Texture2D" uid="uid://bn3s2j5dctdl4" path="res://Textures/Trash/Balance.png" id="2_54s2p"]
 [ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp.ttf" id="3_wv1fu"]
-[ext_resource type="Texture2D" uid="uid://o5y7to4rmtk5" path="res://Textures/Trash/book spread.jpeg" id="5_jw6hq"]
+[ext_resource type="Texture2D" uid="uid://djkiqc2ovun0d" path="res://Textures/Recipe Book.png" id="5_g1rd3"]
 [ext_resource type="Script" path="res://Scripts/Handlers/RecipeBookHandler.cs" id="6_l1s54"]
 [ext_resource type="Texture2D" uid="uid://bcrjtqkb01ljn" path="res://Textures/Trash/Menu button.png" id="7_jhq3w"]
 
@@ -65,5 +65,5 @@ offset_top = 91.0
 offset_right = 467.0
 offset_bottom = 431.0
 scale = Vector2(0.211765, 0.211765)
-texture_normal = ExtResource("5_jw6hq")
+texture_normal = ExtResource("5_g1rd3")
 script = ExtResource("6_l1s54")

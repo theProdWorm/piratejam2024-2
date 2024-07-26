@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PotionData" load_steps=7 format=3 uid="uid://dby7ymd53722w"]
+
+[ext_resource type="Script" path="res://Scripts/Data Classes/PotionData.cs" id="1_s2afp"]
+[ext_resource type="Resource" uid="uid://c2xcewt8q6xee" path="res://Items/Ingredients/Dragon Scales.tres" id="1_x86fv"]
+[ext_resource type="Resource" uid="uid://gpd1d7vh178v" path="res://Items/Ingredients/Dragon Egg.tres" id="2_myk4f"]
+[ext_resource type="Resource" uid="uid://gv3ar0u6u0oj" path="res://Items/Ingredients/Octopus Ink.tres" id="3_xga8x"]
+[ext_resource type="Resource" uid="uid://co46l78p047yx" path="res://Items/Ingredients/Mermaid Tears.tres" id="4_ueuvq"]
+[ext_resource type="Texture2D" uid="uid://cdc0k4exxtqbh" path="res://Textures/Items/Ingredients/Octopus Ink.png" id="5_8qhvr"]
+
+[resource]
+script = ExtResource("1_s2afp")
+Formula = Array[Object]([ExtResource("1_x86fv"), ExtResource("2_myk4f"), ExtResource("3_xga8x"), ExtResource("4_ueuvq")])
+Name = "Potion of Levitation"
+Price = 105
+Texture = ExtResource("5_8qhvr")

@@ -7,5 +7,5 @@
 script = ExtResource("1_phgui")
 PrepMethod = 0
 Name = "Dragon Egg"
-Price = 20
+Price = 30
 Texture = ExtResource("1_3svox")
