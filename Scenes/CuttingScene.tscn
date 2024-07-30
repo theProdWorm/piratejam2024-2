@@ -1,45 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://b1vi3q1b4opqd"]
+[gd_scene load_steps=5 format=3 uid="uid://b1vi3q1b4opqd"]
 
 [ext_resource type="Script" path="res://Scripts/Scene scripts/CuttingScene.cs" id="1_qgt5u"]
 [ext_resource type="Texture2D" uid="uid://chyt4dui2hd3b" path="res://Textures/Preparation_Cutting.png" id="2_sy3fe"]
+[ext_resource type="AudioStream" uid="uid://cj15lpgniya43" path="res://Music/MedievalAbrahamMainThemeFirstDraftLoop.mp3" id="3_1idhf"]
+[ext_resource type="Script" path="res://Scripts/Minigames/RythmPlayer.cs" id="4_lijp6"]
 
-[node name="CuttingScene" type="Node2D"]
+[node name="CuttingScene" type="Node2D" node_paths=PackedStringArray("RythmPlayer")]
 script = ExtResource("1_qgt5u")
+RythmPlayer = NodePath("RythmPlayer")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="Canvas" type="CanvasLayer" parent="."]
 
-[node name="Background(Change to TextureRect later)" type="ColorRect" parent="CanvasLayer"]
+[node name="Background(Change to TextureRect later)" type="ColorRect" parent="Canvas"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.216239, 0.297507, 0.455474, 1)
+metadata/_edit_use_anchors_ = true
 
-[node name="Cutting" type="TextureRect" parent="CanvasLayer"]
+[node name="Cutting" type="TextureRect" parent="Canvas"]
 anchors_preset = -1
 anchor_left = 0.303
 anchor_top = 0.306
 anchor_right = 0.694
-anchor_bottom = 0.696
-offset_left = -0.0559998
-offset_top = -0.28801
-offset_right = 0.511963
-offset_bottom = -0.00802612
+anchor_bottom = 0.643
+offset_left = -0.272003
+offset_top = -0.00802612
+offset_right = 0.343994
+offset_bottom = 0.175995
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_sy3fe")
 expand_mode = 1
 
-[node name="Button" type="Button" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.937
+[node name="Button" type="Button" parent="Canvas"]
+anchors_preset = 1
+anchor_left = 1.0
 anchor_right = 1.0
-anchor_bottom = 0.105
-offset_left = 0.575928
-offset_top = -1.0
-offset_right = -1.0
-offset_bottom = -0.0400009
+offset_left = -80.0
+offset_bottom = 80.0
 text = "Back"
 
-[connection signal="pressed" from="CanvasLayer/Button" to="." method="BackButtonClicked"]
+[node name="RythmPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1idhf")
+volume_db = -20.0
+autoplay = true
+script = ExtResource("4_lijp6")
+Bpm = 74.0
+
+[connection signal="pressed" from="Canvas/Button" to="." method="BackButtonClicked"]

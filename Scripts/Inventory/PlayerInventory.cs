@@ -11,17 +11,21 @@ public partial class PlayerInventory : Inventory {
 
     public RichTextLabel balanceLabel;
 
-    private bool invIsPotions = false;
+    public bool invIsPotions = false;
 
     public override void _Ready () {
+        base._Ready();
         balance = startBalance;
 
         potions = new(16);
         ingredients = new(21);
 
-        balanceLabel = (RichTextLabel) GetNode("/root/Overlay/Balance background/Balance");
+        //balanceLabel = (RichTextLabel) GetNode("/root/Overlay/Balance background/Balance");
+        //
+        //UpdateBalanceLabel();
 
-        UpdateBalanceLabel();
+        for (int i = 0; i < 21; i++)
+            ingredients.Add( GetRandomItem() );
     }
 
     public void CreatePotionOfVirility() {
@@ -44,7 +48,7 @@ public partial class PlayerInventory : Inventory {
         }
     }
 
-    protected void CreatePotionUI () {
+    public void CreatePotionUI () {
         Node2D ui = (Node2D) GetNode("Potions");
 
         List<PotionNode> potionNodes = new();

@@ -29,6 +29,8 @@ config/icon="res://icon.svg"
 
 VolumeSlider="*res://Scenes/VolumeSlider.tscn"
 BrewHandler="*res://Prefabs/BrewHandler.tscn"
+PlayerInventory="*res://Prefabs/Inventory/PlayerInventory.tscn"
+Orders="*res://Scripts/Data Classes/Orders.cs"
 
 [debug]
 

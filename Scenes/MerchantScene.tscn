@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://m4c7uwwo5npk"]
 
-[ext_resource type="Texture2D" uid="uid://bit60l0ed7c2g" path="res://Textures/Trash/Merchant.png" id="1_8gudg"]
+[ext_resource type="Texture2D" uid="uid://bit60l0ed7c2g" path="res://Textures/Trash/MERCHANT.png" id="1_8gudg"]
 [ext_resource type="PackedScene" uid="uid://dcxfexwphf8xb" path="res://Prefabs/Inventory/MerchantInventory.tscn" id="1_v52o5"]
 [ext_resource type="PackedScene" uid="uid://gbsb1rqlb0rf" path="res://Prefabs/Inventory/ShoppingBag.tscn" id="2_nihnv"]
 [ext_resource type="FontFile" uid="uid://buja4ifjv0p8g" path="res://Textures/Fonts/MedievalSharp.ttf" id="3_ybfu4"]

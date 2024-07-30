@@ -46,4 +46,10 @@ public partial class BrewHandler : Node {
         resultPotion = null;
         return false;
     }
+
+    public static PotionData GetRandomPotion()
+    {
+        return potionCodex[GD.RandRange( 0, potionCodex.Count - 1 )];
+    }
+
 }

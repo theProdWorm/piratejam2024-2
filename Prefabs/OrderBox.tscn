@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh1ae3p32w8r1"]
+
+[ext_resource type="Texture2D" uid="uid://idf4fbi12yg8" path="res://Textures/Box.png" id="1_pccrl"]
+
+[node name="OrderBox" type="Sprite2D"]
+position = Vector2(0, -30)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_pccrl")
+
+[node name="Order Text" type="RichTextLabel" parent="."]
+offset_left = -136.0
+offset_top = -72.0
+offset_right = 140.0
+offset_bottom = 180.0
+theme_override_font_sizes/normal_font_size = 25
+text = "Text
+"

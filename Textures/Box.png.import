@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bit60l0ed7c2g"
-path="res://.godot/imported/MERCHANT.png-e07697179532c6e77803c5054d430746.ctex"
+uid="uid://idf4fbi12yg8"
+path="res://.godot/imported/Box.png-f77a1e2560f4cff868827141855b63dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Trash/MERCHANT.png"
-dest_files=["res://.godot/imported/MERCHANT.png-e07697179532c6e77803c5054d430746.ctex"]
+source_file="res://Textures/Box.png"
+dest_files=["res://.godot/imported/Box.png-f77a1e2560f4cff868827141855b63dd.ctex"]
 
 [params]
 

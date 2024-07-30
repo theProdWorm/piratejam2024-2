@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwbxq7wbfgjja"]
+
+[ext_resource type="Texture2D" uid="uid://c4nyh8egn4wt0" path="res://Textures/Ingredients inventory.png" id="1_2nuo7"]
+[ext_resource type="Script" path="res://Scripts/Scene scripts/OrdersScene.cs" id="1_vgc1e"]
+
+[node name="OrdersScene" type="Node2D"]
+script = ExtResource("1_vgc1e")
+
+[node name="IngredientsInventory" type="Sprite2D" parent="."]
+z_index = -10
+position = Vector2(512, 576)
+texture = ExtResource("1_2nuo7")
+flip_h = true
+
+[node name="Order Positions" type="Node2D" parent="."]
+
+[node name="1" type="Node2D" parent="Order Positions"]
+position = Vector2(237, 390)
+
+[node name="2" type="Node2D" parent="Order Positions"]
+position = Vector2(474, 390)
+
+[node name="3" type="Node2D" parent="Order Positions"]
+position = Vector2(718, 390)

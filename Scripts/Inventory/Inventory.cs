@@ -5,26 +5,26 @@ using System.Linq;
 
 [GlobalClass]
 public abstract partial class Inventory : Node2D {
-    public static Dictionary<string, IngredientData> ingredientCodex;
+    public static Dictionary<string, IngredientData> ingredientCodex = new();
     public List<IngredientData> ingredients;
 
     public override void _Ready () {
         string[] ingredientPaths = Directory.GetFiles("Items/Ingredients");
-
+       
         ingredientCodex = new();
 
         foreach(var path in ingredientPaths) {
             var ingredient = ResourceLoader.Load<IngredientData>(path);
-
+            
             ingredientCodex.Add(ingredient.Name, ingredient);
         }
     }
-
+    
     public IngredientData GetRandomItem () {
         int index = GD.RandRange(0, ingredientCodex.Values.Count - 1);
 
         float haggleValue = 0; // TODO: change when HaggleValue is relevant
-
+        
         IngredientData item = new(ingredientCodex.Values.ToArray()[index]) {
             HaggleValue = haggleValue
         };

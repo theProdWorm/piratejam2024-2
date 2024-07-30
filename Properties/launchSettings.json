@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "Piratejam2024-2": {
+      "commandName": "Project",
+      "commandLineArgs": "-e --path \"C:\\Users\\Dennis\\Documents\\Git\\piratejam2024-2\"",
+      "workingDirectory": "C:\\Users\\Dennis\\Documents\\Git\\piratejam2024-2"
+    },
+    "Run": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\Dennis\\Documents\\Godot\\Godot_v4.2.2-stable_mono_win64\\Godot.exe",
+      "commandLineArgs": "\"-path,--verbose\"",
+      "workingDirectory": ".",
+      "nativeDebugging": true
+    }
+  }
+}

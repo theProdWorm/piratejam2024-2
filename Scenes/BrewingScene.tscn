@@ -1,0 +1,110 @@
+[gd_scene load_steps=6 format=3 uid="uid://bao3rjg2148gs"]
+
+[ext_resource type="Script" path="res://Scripts/Scene scripts/BrewingScene.cs" id="1_jgamr"]
+[ext_resource type="Texture2D" uid="uid://deufvb2ua0nmt" path="res://Textures/Cauldron.png" id="1_nprd8"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_px61p"]
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_p8cn5"]
+color = Color(1, 0, 0, 1)
+thickness = 15
+vertical = true
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_66l78"]
+radius = 175.0
+
+[node name="BrewingScene" type="Node2D" node_paths=PackedStringArray("cauldronTempProgressBar", "fireTempSlider", "heatEventText", "trashEventText", "ingredientsText", "trashSpawnArea")]
+script = ExtResource("1_jgamr")
+cauldronTempProgressBar = NodePath("Background/UI/ProgressBar")
+fireTempSlider = NodePath("Background/UI/VSlider")
+heatEventText = NodePath("Background/UI/HeatEvent Text")
+trashEventText = NodePath("Background/UI/TrashEvent Text")
+ingredientsText = NodePath("Background/UI/Ingredient Text")
+trashSpawnArea = NodePath("Pot holder/Trash spawn area")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.288221, 0.230164, 0.753134, 1)
+position = Vector2(512, 384)
+scale = Vector2(1024, 768)
+texture = SubResource("CanvasTexture_px61p")
+
+[node name="UI" type="CanvasLayer" parent="Background"]
+
+[node name="ProgressBar" type="ProgressBar" parent="Background/UI"]
+offset_left = 80.0
+offset_top = 113.0
+offset_right = 150.0
+offset_bottom = 668.0
+fill_mode = 3
+
+[node name="VSlider" type="VSlider" parent="Background/UI"]
+anchors_preset = -1
+anchor_right = 0.427
+anchor_bottom = 0.429
+offset_left = 186.0
+offset_top = 112.0
+offset_right = -170.248
+offset_bottom = 341.528
+theme_override_styles/slider = SubResource("StyleBoxLine_p8cn5")
+step = 0.01
+scrollable = false
+
+[node name="Heat Text" type="RichTextLabel" parent="Background/UI"]
+offset_left = 94.0
+offset_top = 91.0
+offset_right = 134.0
+offset_bottom = 131.0
+text = "Heat"
+
+[node name="Fire Text" type="RichTextLabel" parent="Background/UI"]
+offset_left = 211.0
+offset_top = 90.0
+offset_right = 251.0
+offset_bottom = 130.0
+text = "Fire"
+
+[node name="HeatEvent Text" type="RichTextLabel" parent="Background/UI"]
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 307.0
+offset_bottom = 104.0
+text = "Fire"
+scroll_active = false
+
+[node name="TrashEvent Text" type="RichTextLabel" parent="Background/UI"]
+offset_left = 289.0
+offset_top = -2.0
+offset_right = 595.0
+offset_bottom = 100.0
+text = "Fire"
+scroll_active = false
+
+[node name="Ingredient Text" type="RichTextLabel" parent="Background/UI"]
+offset_left = 720.0
+offset_top = 640.0
+offset_right = 1026.0
+offset_bottom = 769.0
+text = "Fire"
+scroll_active = false
+
+[node name="Back Button" type="Button" parent="Background/UI"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -80.0
+offset_bottom = 80.0
+text = "Back"
+
+[node name="Pot holder" type="Node2D" parent="."]
+editor_description = "For scaling the pot without scaling the items in the pot"
+position = Vector2(512, 384)
+
+[node name="Pot" type="Sprite2D" parent="Pot holder"]
+texture_filter = 1
+position = Vector2(-1.00001, 0)
+scale = Vector2(4, 4)
+texture = ExtResource("1_nprd8")
+
+[node name="Trash spawn area" type="CollisionShape2D" parent="Pot holder"]
+position = Vector2(-1, 0)
+shape = SubResource("CircleShape2D_66l78")

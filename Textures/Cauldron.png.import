@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bit60l0ed7c2g"
-path="res://.godot/imported/MERCHANT.png-e07697179532c6e77803c5054d430746.ctex"
+uid="uid://deufvb2ua0nmt"
+path="res://.godot/imported/Cauldron.png-4d16de840d5cbfee7b1d29abfdada1e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Trash/MERCHANT.png"
-dest_files=["res://.godot/imported/MERCHANT.png-e07697179532c6e77803c5054d430746.ctex"]
+source_file="res://Textures/Cauldron.png"
+dest_files=["res://.godot/imported/Cauldron.png-4d16de840d5cbfee7b1d29abfdada1e5.ctex"]
 
 [params]
 
